@@ -3,28 +3,38 @@
 Objetivo: convertir `modelo_logico.sql` en un **diagrama ER** para entregar
 (13/10/2026).
 
+> Requisito previo: el servidor MySQL de **XAMPP** corriendo y la base
+> `bienestar_en_casa` importada. Si no lo tienes, sigue primero `guia_xampp.md`.
+
 ## 1. Tener MySQL Workbench instalado
 
 Descarga desde <https://dev.mysql.com/downloads/workbench/> (la edición
-Community es gratis). No necesita un servidor MySQL corriendo para generar el
-diagrama.
+Community es gratis). Workbench **no** trae servidor: se conecta al MySQL que
+ya está en marcha en XAMPP (puerto `3306`).
 
-## 2. Crear el modelo desde el script
+## 2. Conectar Workbench al MySQL de XAMPP (una sola vez)
 
-1. Abrir Workbench → **Database ▸ Reverse Engineer...**
-2. En *Connection* dejar el que haya (o **Store Connection...** si es la primera
-   vez). Si no hay servidor, se puede cancelar el paso de conexión y en su
-   lugar: **File ▸ Open Model...** no aplica aquí — para eso usamos el camino
-   inverso (ver paso 3). *Si tienes servidor MySQL saltando: sigue el paso 2b.*
-3. **2b (recomendado si tienes servidor):**
-   - Crear una base de datos vacía en el servidor (phpMyAdmin o el propio
-     Workbench: botón "create a new schema" → nombre `bienestar_en_casa`).
-   - **Database ▸ Execute SQL Script...** → seleccionar `modelo_logico.sql`
-     → ejecutar (Ctrl+Shift+Enter).
-   - **Database ▸ Reverse Engineer...** → elegir ese schema → Finish.
-     Workbench genera el modelo EER con las 12 tablas y relaciones.
+1. Abrir Workbench → en la pantalla de inicio, **MySQL Connections** → `+`.
+2. Llenar:
+   - **Connection Name:** `XAMPP` (o el nombre que quieras)
+   - **Hostname:** `127.0.0.1`   **Port:** `3306`
+   - **Username:** `root`
+   - **Password:** vacío (por defecto en XAMPP) o la que hayas puesto en
+     phpMyAdmin ▸ Security.
+3. **Test Connection** → debe decir *Successfully made the MySQL connection*.
+   Si falla, revisar que MySQL esté verde en el XAMPP Control Panel (ver
+   solución de puertos en `guia_xampp.md` §7).
 
-## 3. Alternativa sin servidor MySQL (100% local)
+## 3. Generar el diagrama desde el script (Reverse Engineer)
+
+1. Abrir la conexión `XAMPP`.
+2. **Database ▸ Reverse Engineer...** → Next.
+3. Confirmar la conexión → Next.
+4. Elegir el schema **`bienestar_en_casa`** → Next → Next → **Execute**.
+5. Workbench genera el modelo EER con las 12 tablas y sus relaciones.
+   Guardarlo con **File ▸ Save Model As...** (por ejemplo `modelo.mwb`).
+
+## 4. Alternativa sin servidor MySQL (100% local)
 
 1. **File ▸ New Model** (o Models en el panel izquierdo).
 2. En *EER Diagram* → **Add Diagram**.
@@ -35,9 +45,10 @@ diagrama.
    columna. Workbench dibuja automáticamente las líneas 1:N.
 
 > Consejo: aunque se haga a mano, **siempre contrastar contra `modelo_logico.sql`**
-> — ese archivo es la fuente de verdad.
+> — ese archivo es la fuente de verdad. Con XAMPP ya instalado, lo normal es usar
+> el Reverse Engineer (sección 3) y no este camino manual.
 
-## 4. Exportar el diagrama para entregar
+## 5. Exportar el diagrama para entregar
 
 1. Abrir el diagrama EER.
 2. **File ▸ Export ▸ PDF** (o PNG con captura/ **File ▸ Export ▸ Image**).
@@ -45,7 +56,7 @@ diagrama.
    "lay out tables" (el que reorganiza) para que no se solapen.
 4. Guardar el archivo exportado en esta misma carpeta como `diagrama.pdf`.
 
-## 5. Checklist antes de entregar
+## 6. Checklist antes de entregar
 
 - [ ] 12 tablas visibles en el diagrama.
 - [ ] Todas las FK con línea hacia su tabla padre (cardinalidades legibles).

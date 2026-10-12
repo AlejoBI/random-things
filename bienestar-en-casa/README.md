@@ -26,11 +26,18 @@ bienestar-en-casa/
 │   └── 01-modelo-logico.md        # metodología: del texto al modelo (guía de sustentación)
 └── entregas/
     └── entrega1-modelo-logico/
+        ├── guia_xampp.md          # instalar/arrancar XAMPP, importar y validar la BD
         ├── modelo_logico.sql      # DDL completo – fuente de verdad
         ├── diccionario_datos.md   # cada columna: tipo + frase del texto que la justifica
-        ├── guia_workbench.md      # cómo generar y exportar el diagrama
+        ├── guia_workbench.md      # conectar Workbench a XAMPP y exportar el diagrama
         └── diagrama.pdf           # (a exportar)
 ```
+
+## Entorno de trabajo
+
+El proyecto se trabaja sobre **XAMPP** (MySQL/MariaDB + phpMyAdmin + Apache) y el
+diagrama del modelo lógico se genera con **MySQL Workbench** conectado a la base
+de XAMPP. Guías paso a paso: `guia_xampp.md` y `guia_workbench.md`.
 
 ## Cómo se usó este material para sustentar
 
