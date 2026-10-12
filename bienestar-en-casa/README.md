@@ -23,7 +23,8 @@ masajes **no médicos** prestados a domicilio por profesionales independientes.
 bienestar-en-casa/
 ├── README.md
 ├── docs/
-│   └── 01-modelo-logico.md        # metodología: del texto al modelo (guía de sustentación)
+│   ├── 01-modelo-logico.md        # metodología: del texto al modelo (guía de sustentación)
+│   └── 02-guion-docente-mer-der.md # guion para explicarle MER/DER y el proceso
 └── entregas/
     └── entrega1-modelo-logico/
         ├── guia_xampp.md          # instalar/arrancar XAMPP, importar y validar la BD
@@ -44,9 +45,12 @@ de XAMPP. Guías paso a paso: `guia_xampp.md` y `guia_workbench.md`.
 1. **`docs/01-modelo-logico.md`** explica los 5 pasos de la metodología
    (sustantivos → entidades, modificadores → atributos, verbos →
    cardinalidades, reglas → decisiones, prohibiciones → lo que NO se modeló).
-2. **`diccionario_datos.md`** es la referencia rápida "¿por qué esta columna?":
+2. **`docs/02-guion-docente-mer-der.md`** es el guion para dar clase: qué es un
+   dato, MER vs DER, los 3 niveles del modelo, los elementos del MER con
+   ejemplos del proyecto, y las reglas de transformación al modelo relacional.
+3. **`diccionario_datos.md`** es la referencia rápida "¿por qué esta columna?":
    cada una cita la frase exacta del universo del discurso.
-3. **`modelo_logico.sql`** es el modelo en sí; de ahí se genera el diagrama
+4. **`modelo_logico.sql`** es el modelo en sí; de ahí se genera el diagrama
    con la guía de Workbench.
 
 ## Reglas del negocio que nunca se pierden de vista
