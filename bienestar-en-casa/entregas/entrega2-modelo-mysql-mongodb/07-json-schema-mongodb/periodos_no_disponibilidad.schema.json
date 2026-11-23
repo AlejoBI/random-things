@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/periodos_no_disponibilidad.schema.json",
+  "title": "periodos_no_disponibilidad",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proveedor_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "fecha_inicio": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fecha_fin": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "motivo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "proveedor_id",
+    "fecha_inicio",
+    "fecha_fin"
+  ]
+}

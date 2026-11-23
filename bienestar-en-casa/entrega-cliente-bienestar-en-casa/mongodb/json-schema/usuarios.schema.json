@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/usuarios.schema.json",
+  "title": "usuarios",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "email": {
+      "type": "string",
+      "maxLength": 120,
+      "format": "email"
+    },
+    "password_hash": {
+      "type": "string",
+      "maxLength": 255
+    },
+    "tipo": {
+      "enum": [
+        "CLIENTE",
+        "PROVEEDOR"
+      ]
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "telefono": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fecha_registro": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "cliente": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "proveedor": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "biografia": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "anios_experiencia": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    }
+  },
+  "required": [
+    "id",
+    "email",
+    "password_hash",
+    "tipo",
+    "nombre",
+    "fecha_registro"
+  ]
+}

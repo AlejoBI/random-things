@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/recuperacion_contrasena.schema.json",
+  "title": "recuperacion_contrasena",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "usuario_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "codigo": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "fecha_expiracion": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fecha_uso": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "fecha_creacion": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "invalidado": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "usuario_id",
+    "codigo",
+    "fecha_expiracion",
+    "fecha_creacion",
+    "invalidado"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/horarios_disponibilidad.schema.json",
+  "title": "horarios_disponibilidad",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proveedor_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "dia_semana": {
+      "enum": [
+        "LUNES",
+        "MARTES",
+        "MIERCOLES",
+        "JUEVES",
+        "VIERNES",
+        "SABADO",
+        "DOMINGO"
+      ]
+    },
+    "hora_inicio": {
+      "type": "string",
+      "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9]$"
+    },
+    "hora_fin": {
+      "type": "string",
+      "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9]$"
+    }
+  },
+  "required": [
+    "id",
+    "proveedor_id",
+    "dia_semana",
+    "hora_inicio",
+    "hora_fin"
+  ]
+}

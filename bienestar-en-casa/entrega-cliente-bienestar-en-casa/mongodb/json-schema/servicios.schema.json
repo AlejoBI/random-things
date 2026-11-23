@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/servicios.schema.json",
+  "title": "servicios",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proveedor_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "categoria": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "descripcion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "duracion_minutos": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "precio": {
+      "type": "number",
+      "minimum": 0
+    },
+    "estado": {
+      "enum": [
+        "ACTIVO",
+        "INACTIVO"
+      ]
+    },
+    "multimedia": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tipo": {
+            "enum": [
+              "FOTO",
+              "VIDEO"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "orden": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "tipo",
+          "url",
+          "orden"
+        ]
+      }
+    },
+    "insumos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "tipo": {
+            "enum": [
+              "PRODUCTO",
+              "INSUMO",
+              "EQUIPO"
+            ]
+          },
+          "nombre": {
+            "type": "string",
+            "maxLength": 150
+          },
+          "descripcion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "tipo",
+          "nombre"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "proveedor_id",
+    "nombre",
+    "categoria",
+    "duracion_minutos",
+    "precio",
+    "estado",
+    "multimedia",
+    "insumos"
+  ]
+}

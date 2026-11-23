@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/solicitudes.schema.json",
+  "title": "solicitudes",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cliente_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "proveedor_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "servicio_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "servicio_nombre": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "servicio_precio": {
+      "type": "number",
+      "minimum": 0
+    },
+    "servicio_duracion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "direccion_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "barrio_sector": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "info_localizacion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "observaciones": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fecha_hora_inicio": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fecha_hora_propuesta": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "estado": {
+      "enum": [
+        "PENDIENTE",
+        "SUGERIDA",
+        "ACEPTADA",
+        "RECHAZADA",
+        "CANCELADA",
+        "COMPLETADA"
+      ]
+    },
+    "motivo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fecha_creacion": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "fecha_actualizacion": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "cliente_id",
+    "proveedor_id",
+    "servicio_id",
+    "servicio_nombre",
+    "servicio_precio",
+    "servicio_duracion",
+    "direccion_id",
+    "fecha_hora_inicio",
+    "estado",
+    "fecha_creacion",
+    "fecha_actualizacion"
+  ]
+}

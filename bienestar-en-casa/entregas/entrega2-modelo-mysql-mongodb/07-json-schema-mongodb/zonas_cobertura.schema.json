@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/zonas_cobertura.schema.json",
+  "title": "zonas_cobertura",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "proveedor_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "ciudad": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "barrio_sector": {
+      "type": "string",
+      "maxLength": 100
+    }
+  },
+  "required": [
+    "id",
+    "proveedor_id",
+    "ciudad",
+    "barrio_sector"
+  ]
+}

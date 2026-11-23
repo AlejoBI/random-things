@@ -1,0 +1,3118 @@
+{
+  "modelName": "01-hackolade-ddl",
+  "collections": [
+    {
+      "collectionName": "usuarios",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "57e1eb63-0ef2-4bc0-93df-b284cb65f6fc",
+            "constraintName": "pk_usuarios",
+            "order": "ASC"
+          },
+          "GUID": "9bbf6d4f-f172-484a-b3c7-c8ea50558e25",
+          "childRelationships": [
+            "a0a61622-9936-426b-81ab-94cf358f8085",
+            "fdcd142d-b0e7-4d87-bdf9-3321888ce755",
+            "677cf1c5-e21e-4743-bdd2-1da2df27cf29"
+          ]
+        },
+        {
+          "code": "",
+          "name": "email",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "794e926c-fc40-4620-b22e-80b2959b4264"
+        },
+        {
+          "code": "",
+          "name": "password_hash",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 255,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "89fb588c-a792-4ae3-810b-1e50e3b5bcd8"
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "CLIENTE",
+            "PROVEEDOR"
+          ],
+          "GUID": "6991c630-c262-4f19-95f1-f6e9f1ac9548"
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 100,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c5805b24-8e76-4509-abf5-aff533222961"
+        },
+        {
+          "code": "",
+          "name": "telefono",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 20,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3250bf25-8239-4af0-ae7f-ebedaa3b363b"
+        },
+        {
+          "code": "",
+          "name": "fecha_registro",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "CURRENT_TIMESTAMP",
+          "GUID": "6fea8f20-26d9-4bc8-aebe-47a75b8215f1"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "5beab103-54d5-4bab-95ed-c927b91ae616"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "7f2b97fe-7432-4261-8c82-aecc41e21a30",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      }
+    },
+    {
+      "collectionName": "clientes",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "usuario_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "primaryKeyOptions": {
+            "GUID": "9862abe9-7fd4-4076-b841-b2f1ae3cd456",
+            "constraintName": "pk_clientes",
+            "order": "ASC"
+          },
+          "GUID": "4ff95935-a8b8-4785-8ca9-a19935604271",
+          "childRelationships": [
+            "91d955fd-634c-4803-bd7d-b669b996c547",
+            "641f880e-42b4-407d-ab2c-df77474923d2"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "a0a61622-9936-426b-81ab-94cf358f8085",
+          "foreignCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "foreignField": [
+            "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+            "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+          ]
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "f4a590b8-e291-4212-bc26-40d28cde3b2e"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "8e81da1f-9756-4b75-b90c-58729c764a0a",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      }
+    },
+    {
+      "collectionName": "proveedores",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "usuario_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "primaryKeyOptions": {
+            "GUID": "2b51f708-bb72-45e3-adc5-e706d3f82676",
+            "constraintName": "pk_proveedores",
+            "order": "ASC"
+          },
+          "GUID": "27b20045-e3ca-4de4-9230-f3e0a881939a",
+          "childRelationships": [
+            "9720f8a8-9c31-4416-bb8c-ebb252cac7aa",
+            "6de2ff2d-91ee-480c-be65-40c6eb5573de",
+            "2024c3af-f02a-4cf4-955e-b48b71e5e441",
+            "cfb233ae-f072-4c5a-b645-15e0382fec96",
+            "7ff467cb-6ded-495c-a82d-28c72ce07e8d"
+          ],
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "fdcd142d-b0e7-4d87-bdf9-3321888ce755",
+          "foreignCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "foreignField": [
+            "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+            "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+          ]
+        },
+        {
+          "code": "",
+          "name": "biografia",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "5183f5a3-9da5-488f-9cb5-38c69a71b02e"
+        },
+        {
+          "code": "",
+          "name": "anios_experiencia",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": false,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "3ce531f1-439b-4b36-bada-556201fcea8e"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "c4e4a25a-93f8-4f39-8695-238c7b5cd0d1"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "c7489528-40a2-4423-b721-ebf4812d40bd",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "chkConstr": [
+        {
+          "GUID": "5945f66d-b62a-4835-8467-684c5d269e09",
+          "chkConstrName": "ck_proveedores_anios",
+          "constrExpression": "anios_experiencia IS NULL OR anios_experiencia >= 0",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "direcciones",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "f2f8c616-3b64-4e61-992f-a2d7ee9be256",
+            "constraintName": "pk_direcciones",
+            "order": "ASC"
+          },
+          "GUID": "c289aa63-1ab3-44d9-ad80-bf9bf750680b",
+          "childRelationships": [
+            "37a7f523-6575-4ed6-93cb-e7b97e4c930d"
+          ]
+        },
+        {
+          "code": "",
+          "name": "cliente_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "33a2e79f-933b-4d89-9429-cd093be3143d",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "91d955fd-634c-4803-bd7d-b669b996c547",
+          "foreignCollection": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+          "foreignField": [
+            "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+            "4ff95935-a8b8-4785-8ca9-a19935604271"
+          ]
+        },
+        {
+          "code": "",
+          "name": "ciudad",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "542dab2a-25a8-4fbe-a83b-d3c502d57b67"
+        },
+        {
+          "code": "",
+          "name": "barrio",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4f0e8ad8-ff8a-454c-87bf-c3d86bc9aca6"
+        },
+        {
+          "code": "",
+          "name": "calle",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 120,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "8ff2c659-4865-4f73-96d6-80a819806ddc"
+        },
+        {
+          "code": "",
+          "name": "numero",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 20,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "df5fec39-f875-47d0-9e54-69db71fa1499"
+        },
+        {
+          "code": "",
+          "name": "referencia",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "0c78bbdb-3bd6-46b3-abee-360d8f3ce882"
+        },
+        {
+          "code": "",
+          "name": "es_principal",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "tinyint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": 0,
+          "precision": 1,
+          "GUID": "833b0173-c97d-449c-a300-e9fe52a7fd46"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "dc75fcc9-fd2c-46e7-b427-3cc9178c8207"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "96c1f803-42d4-4a83-93ff-f6ada09bdb3e",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "chkConstr": [
+        {
+          "GUID": "fde553a5-1c1a-4180-a369-bebc93759d1f",
+          "chkConstrName": "ck_direcciones_principal",
+          "constrExpression": "es_principal IN (0,1)",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "zonas_cobertura",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "d32c0396-84b9-413e-bad1-d163d9867f1c",
+            "constraintName": "pk_zonas",
+            "order": "ASC"
+          },
+          "GUID": "3cc416e4-1acb-43b9-8913-65f424b1820c"
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "ef457673-e0d2-4a87-9851-551ed303c01c",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "9720f8a8-9c31-4416-bb8c-ebb252cac7aa",
+          "foreignCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "foreignField": [
+            "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "27b20045-e3ca-4de4-9230-f3e0a881939a"
+          ]
+        },
+        {
+          "code": "",
+          "name": "ciudad",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "eb65bb68-99d9-4d0c-8ea1-fc1c3778b5bb"
+        },
+        {
+          "code": "",
+          "name": "barrio_sector",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 100,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "''",
+          "GUID": "ff0f4a5c-0d9c-45ba-87e9-85d9333882e5"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "910a7941-88ef-4e3c-9d1c-987d1cae8aee"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "eb782a64-5e7c-4390-b76b-c581ea7a632c",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "768fb9fa-1874-46f7-9463-eb3e6217b511",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      }
+    },
+    {
+      "collectionName": "servicios",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "45e2d571-5b08-4f22-b022-8f89de911161",
+            "constraintName": "pk_servicios",
+            "order": "ASC"
+          },
+          "GUID": "82fea13f-c49a-4203-a466-5ce588013268",
+          "childRelationships": [
+            "39924924-b4f6-4942-91ee-07cc38839bc2",
+            "ea3067f5-9a09-4e16-9ab9-379dc6468805",
+            "bdc457d7-364e-4faa-8d0f-04f044f268ac"
+          ]
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "774f422e-0c49-4077-8739-4afa41b5ed80",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "6de2ff2d-91ee-480c-be65-40c6eb5573de",
+          "foreignCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "foreignField": [
+            "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "27b20045-e3ca-4de4-9230-f3e0a881939a"
+          ]
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 100,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9f702e38-5279-40d7-94b0-ed46fdd2ac9e"
+        },
+        {
+          "code": "",
+          "name": "categoria",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 80,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "90580e4d-24bd-4c09-9794-b10a70f0518d"
+        },
+        {
+          "code": "",
+          "name": "descripcion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "36184a1a-e68c-4549-99b1-96c9fb45fb1b"
+        },
+        {
+          "code": "",
+          "name": "duracion_minutos",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f3d099a7-982c-4d5b-994c-41a156299804"
+        },
+        {
+          "code": "",
+          "name": "precio",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "decimal",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "precision": 10,
+          "scale": 2,
+          "GUID": "05d0add6-47d9-42e7-b582-223c0669c326"
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "default": "'ACTIVO'",
+          "required": true,
+          "enum": [
+            "ACTIVO",
+            "INACTIVO"
+          ],
+          "GUID": "a618d481-24a8-4dba-b663-6162ad36163a"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "2f70998f-1eee-4a39-a787-0393164c946c"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "fe25fb91-6261-4c54-977e-c084f2c1a90e",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "909c9fe3-35dc-4980-839b-4a69d3e454b6",
+          "indxName": "idx_servicios_categoria",
+          "indxKey": [
+            {
+              "keyId": "90580e4d-24bd-4c09-9794-b10a70f0518d",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        },
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "3ba323d4-2ec1-4d7b-9dd3-352747b61de7",
+          "indxName": "idx_servicios_nombre",
+          "indxKey": [
+            {
+              "keyId": "9f702e38-5279-40d7-94b0-ed46fdd2ac9e",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [
+        {
+          "GUID": "4f6ae0e9-8513-4a38-8457-554574f0c6ad",
+          "chkConstrName": "ck_servicios_duracion",
+          "constrExpression": "duracion_minutos > 0",
+          "constrEnforcement": ""
+        },
+        {
+          "GUID": "1bf944f0-2281-442d-a429-22bc733aefdd",
+          "chkConstrName": "ck_servicios_precio",
+          "constrExpression": "precio >= 0",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "servicios_multimedia",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "74e5f5af-d1db-44b4-99a8-32692eb458f9",
+            "constraintName": "pk_servicios_multimedia",
+            "order": "ASC"
+          },
+          "GUID": "cf35e37f-fec5-4aea-8736-24f0ba971968"
+        },
+        {
+          "code": "",
+          "name": "servicio_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "4f1c2a1f-a965-4abc-8124-ed404199636a",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "39924924-b4f6-4942-91ee-07cc38839bc2",
+          "foreignCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "foreignField": [
+            "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+            "82fea13f-c49a-4203-a466-5ce588013268"
+          ]
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "FOTO",
+            "VIDEO"
+          ],
+          "GUID": "a8bb6a7a-ed80-4450-be32-41bcb5d0de11"
+        },
+        {
+          "code": "",
+          "name": "url",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 500,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f26b47bf-073c-447c-b185-a30a773fe293"
+        },
+        {
+          "code": "",
+          "name": "orden",
+          "isActivated": true,
+          "signed": false,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "tinyint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": 1,
+          "GUID": "09fc9bd8-764e-4f74-830a-93da82594ba2"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "e17d99ca-46ee-41e8-b72d-0100432ae633"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "79b3b929-4eb9-48e5-b7a7-27e636d57736",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "268ab623-0bce-4786-a566-eadf0aa9e87f",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      }
+    },
+    {
+      "collectionName": "servicios_insumos",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "ab83bd55-da25-4fd2-8ffd-ac09aed77ca3",
+            "constraintName": "pk_servicios_insumos",
+            "order": "ASC"
+          },
+          "GUID": "90f8f0a8-0627-4065-aaed-86426722a126"
+        },
+        {
+          "code": "",
+          "name": "servicio_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b8d7281b-dc23-45fa-a2c3-ef68472cb6fc",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "ea3067f5-9a09-4e16-9ab9-379dc6468805",
+          "foreignCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "foreignField": [
+            "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+            "82fea13f-c49a-4203-a466-5ce588013268"
+          ]
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "PRODUCTO",
+            "INSUMO",
+            "EQUIPO"
+          ],
+          "GUID": "7bbb59f6-e2f5-45b3-b4c2-e8ce9ce5e443"
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 150,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "e19f2ddf-02d2-40f6-82af-1ed7fe44adbe"
+        },
+        {
+          "code": "",
+          "name": "descripcion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "318d750a-b285-421a-b4e2-8d9a38b21b6c"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "9f2860c7-1a28-4967-a6ca-94f6476f4f59"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "26282cc7-f827-43ce-914b-cb8030e63648",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      }
+    },
+    {
+      "collectionName": "horarios_disponibilidad",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "94b47bce-dd78-4937-becd-14cf5de00fe6",
+            "constraintName": "pk_horarios",
+            "order": "ASC"
+          },
+          "GUID": "c8ef4fd1-df27-4e58-94dc-e0985333094d"
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "8925ece1-1004-475e-ac7f-e222ae64209b",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "2024c3af-f02a-4cf4-955e-b48b71e5e441",
+          "foreignCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "foreignField": [
+            "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "27b20045-e3ca-4de4-9230-f3e0a881939a"
+          ]
+        },
+        {
+          "code": "",
+          "name": "dia_semana",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "required": true,
+          "enum": [
+            "LUNES",
+            "MARTES",
+            "MIERCOLES",
+            "JUEVES",
+            "VIERNES",
+            "SABADO",
+            "DOMINGO"
+          ],
+          "GUID": "20e8ebd4-e0ee-420e-af01-12278cbfc4a5"
+        },
+        {
+          "code": "",
+          "name": "hora_inicio",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "time",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "b7577846-f825-48e3-8751-35005d557625"
+        },
+        {
+          "code": "",
+          "name": "hora_fin",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "time",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "907f2626-6028-4eb7-b0aa-f488ab45d4bb"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "f397c030-f894-45c0-91b0-821740dda839"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "e0d23bc3-1224-49cc-92c8-e3b36ee876e9",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "a3649bc3-c0fe-44d3-a81c-698c02b20b90",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "chkConstr": [
+        {
+          "GUID": "474243b7-d38f-4fab-a8be-5686592e3348",
+          "chkConstrName": "ck_horarios_horas",
+          "constrExpression": "hora_inicio < hora_fin",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "periodos_no_disponibilidad",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "06b971cf-0bb0-4aca-8ff2-8d2db1aba9b3",
+            "constraintName": "pk_periodos",
+            "order": "ASC"
+          },
+          "GUID": "aa88f5b1-8cc7-4f77-bf9b-5850ee6ddff7"
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "07974875-7fcd-4487-9db7-87ac5292f410",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "cfb233ae-f072-4c5a-b645-15e0382fec96",
+          "foreignCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "foreignField": [
+            "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "27b20045-e3ca-4de4-9230-f3e0a881939a"
+          ]
+        },
+        {
+          "code": "",
+          "name": "fecha_inicio",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "f9902402-349b-42ca-a476-198ae57aa6d2"
+        },
+        {
+          "code": "",
+          "name": "fecha_fin",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "0c68b2a2-b983-454d-a71f-297834de5e57"
+        },
+        {
+          "code": "",
+          "name": "motivo",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 200,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "9e7954c5-3d5c-4c6c-83d7-b1d435d5ae95"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "0da0304b-6c68-458d-ac2c-7344f9f82d4f"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "1744e6fe-b415-4640-a5ac-04fdf2d3858d",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "b26821ca-7524-455b-aef8-f4ef83ab8b8a",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "chkConstr": [
+        {
+          "GUID": "99870203-aafa-498d-9028-b706bddc9850",
+          "chkConstrName": "ck_periodos_fechas",
+          "constrExpression": "fecha_inicio < fecha_fin",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "recuperacion_contrasena",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "b898e738-5417-4825-a024-8db5087e83be",
+            "constraintName": "pk_recuperacion",
+            "order": "ASC"
+          },
+          "GUID": "c006180b-351f-42e8-a963-0e2e9b8eacfa"
+        },
+        {
+          "code": "",
+          "name": "usuario_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "07ce5848-7376-4bec-aeae-852f2f253ffc",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "677cf1c5-e21e-4743-bdd2-1da2df27cf29",
+          "foreignCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "foreignField": [
+            "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+            "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+          ]
+        },
+        {
+          "code": "",
+          "name": "codigo",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 20,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "90f427c5-b407-49dd-8a4a-b2ba84b78322"
+        },
+        {
+          "code": "",
+          "name": "fecha_expiracion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "c25085ed-389e-4596-865c-aec90670f1b6"
+        },
+        {
+          "code": "",
+          "name": "fecha_uso",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": false,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "0bb8e936-b04e-4b0c-b05b-b5f41e1f9f80"
+        },
+        {
+          "code": "",
+          "name": "fecha_creacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "CURRENT_TIMESTAMP",
+          "GUID": "10ea2318-22ce-42db-b5b1-b7e3ff5a609d"
+        },
+        {
+          "code": "",
+          "name": "invalidado",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "tinyint",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": 0,
+          "precision": 1,
+          "GUID": "6232b42f-4169-4e40-b101-82baa3ce76ad"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "a3049105-f525-4bc9-8943-0417160b80ed"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "f39dbb85-a419-4efe-bff2-28f5ec3d91fd",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "017dd727-9572-4f3c-b56d-46321fafae9c",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "chkConstr": [
+        {
+          "GUID": "ef207e1d-7c83-4408-8dad-00f975fcdc51",
+          "chkConstrName": "ck_recuperacion_vigencia",
+          "constrExpression": "fecha_expiracion > fecha_creacion",
+          "constrEnforcement": ""
+        },
+        {
+          "GUID": "2fa26769-b342-4492-a5af-a6ec099a19f8",
+          "chkConstrName": "ck_recuperacion_invalidado",
+          "constrExpression": "invalidado IN (0,1)",
+          "constrEnforcement": ""
+        },
+        {
+          "GUID": "c7d33ca6-86e1-44bb-9f22-cdc0eab0b274",
+          "chkConstrName": "ck_recuperacion_usado",
+          "constrExpression": "fecha_uso IS NULL OR invalidado = 1",
+          "constrEnforcement": ""
+        }
+      ]
+    },
+    {
+      "collectionName": "solicitudes",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": true,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "autoincrement": true,
+          "primaryKeyOptions": {
+            "GUID": "6e55513b-4d98-43fa-870b-de44e576a957",
+            "constraintName": "pk_solicitudes",
+            "order": "ASC"
+          },
+          "GUID": "844f9eef-b15f-403b-834e-d33d222808d6"
+        },
+        {
+          "code": "",
+          "name": "cliente_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "08896ffc-0500-4259-8778-e89b27078eac",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "641f880e-42b4-407d-ab2c-df77474923d2",
+          "foreignCollection": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+          "foreignField": [
+            "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+            "4ff95935-a8b8-4785-8ca9-a19935604271"
+          ]
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "d651e834-0551-495a-8753-0b4655f5ef91",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "7ff467cb-6ded-495c-a82d-28c72ce07e8d",
+          "foreignCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "foreignField": [
+            "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "27b20045-e3ca-4de4-9230-f3e0a881939a"
+          ]
+        },
+        {
+          "code": "",
+          "name": "servicio_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "76c9cc0f-898d-422f-ab7c-7b5798e2ac9c",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "bdc457d7-364e-4faa-8d0f-04f044f268ac",
+          "foreignCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "foreignField": [
+            "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+            "82fea13f-c49a-4203-a466-5ce588013268"
+          ]
+        },
+        {
+          "code": "",
+          "name": "servicio_nombre",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 100,
+          "subtype": "string",
+          "required": true,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "''",
+          "GUID": "809c6ba7-ec32-4694-a08c-29b399fd28aa"
+        },
+        {
+          "code": "",
+          "name": "servicio_precio",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "decimal",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": 0,
+          "precision": 10,
+          "scale": 2,
+          "GUID": "258111e5-44da-4793-8a17-9555761720ef"
+        },
+        {
+          "code": "",
+          "name": "servicio_duracion",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": 1,
+          "GUID": "c033e710-b78e-4c6c-a06e-a604373e8c1c"
+        },
+        {
+          "code": "",
+          "name": "direccion_id",
+          "isActivated": true,
+          "signed": true,
+          "primaryKey": false,
+          "unique": false,
+          "exclusiveMinimum": false,
+          "exclusiveMaximum": false,
+          "mode": "int",
+          "required": true,
+          "alternateKey": false,
+          "childType": "numeric",
+          "type": "numeric",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "a1c09308-d980-4384-ab94-fa96da3cd231",
+          "relationshipType": "Foreign Key",
+          "parentRelationship": "37a7f523-6575-4ed6-93cb-e7b97e4c930d",
+          "foreignCollection": "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+          "foreignField": [
+            "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+            "c289aa63-1ab3-44d9-ad80-bf9bf750680b"
+          ]
+        },
+        {
+          "code": "",
+          "name": "barrio_sector",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "varchar",
+          "length": 100,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "45691c29-30ce-4882-8647-e85e03ac90de"
+        },
+        {
+          "code": "",
+          "name": "info_localizacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "492450ed-7da4-4dc3-855b-e7c60c416a10"
+        },
+        {
+          "code": "",
+          "name": "observaciones",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "69a9be37-d4f6-49cd-878d-b020ab83eaa7"
+        },
+        {
+          "code": "",
+          "name": "fecha_hora_inicio",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "901080be-a961-4a5d-bf3c-86561b0d2e84"
+        },
+        {
+          "code": "",
+          "name": "fecha_hora_propuesta",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": false,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "5eebe5eb-ce32-4586-a9b2-4598261bf031"
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "childType": "enum",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "default": "'PENDIENTE'",
+          "required": true,
+          "enum": [
+            "PENDIENTE",
+            "SUGERIDA",
+            "ACEPTADA",
+            "RECHAZADA",
+            "CANCELADA",
+            "COMPLETADA"
+          ],
+          "GUID": "8bf9b150-aae8-477a-8816-011b3491785f"
+        },
+        {
+          "code": "",
+          "name": "motivo",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "text",
+          "length": null,
+          "subtype": "string",
+          "required": false,
+          "alternateKey": false,
+          "childType": "char",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "GUID": "659f3a43-dfd4-41d5-94a3-0d18d81019b0"
+        },
+        {
+          "code": "",
+          "name": "fecha_creacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "CURRENT_TIMESTAMP",
+          "GUID": "4e250127-f39d-408c-adf5-a899b81065fc"
+        },
+        {
+          "code": "",
+          "name": "fecha_actualizacion",
+          "isActivated": true,
+          "primaryKey": false,
+          "unique": false,
+          "mode": "datetime",
+          "required": true,
+          "alternateKey": false,
+          "childType": "datetime",
+          "type": "string",
+          "compositePrimaryKey": false,
+          "compositeUniqueKey": false,
+          "default": "CURRENT_TIMESTAMP\n                                     ON UPDATE CURRENT_TIMESTAMP",
+          "GUID": "1a303f2d-97fa-4b39-ad04-9ada92684a17"
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "3693aaa2-b7d4-4a5e-b5cf-324aa33b1167"
+      },
+      "isActivated": true,
+      "additionalProperties": false,
+      "GUID": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+      "bucketId": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "ifNotExist": false,
+      "temporary": false,
+      "tableOptions": {
+        "GUID": "9b75ef82-765e-4a1c-a813-9bdc26340a67",
+        "defaultStorEng": false,
+        "defaultCharSet": true,
+        "ENGINE": "InnoDB",
+        "compression": "",
+        "AUTO_INCREMENT": "",
+        "DATA_DIRECTORY": "",
+        "INDEX_DIRECTORY": "",
+        "ENCRYPTION": "No",
+        "KEY_BLOCK_SIZE": "",
+        "ROW_FORMAT": "",
+        "STATS_AUTO_RECALC": "",
+        "STATS_PERSISTENT": ""
+      },
+      "Indxs": [
+        {
+          "isActivated": true,
+          "indexType": "",
+          "indexCategory": "",
+          "indexAlgorithm": "",
+          "indexLock": "",
+          "GUID": "49adeda8-9ab1-46bd-a3ff-4c21619e9045",
+          "indxName": "idx_solicitudes_agenda",
+          "indxKey": [
+            {
+              "keyId": "d651e834-0551-495a-8753-0b4655f5ef91",
+              "type": "ASC"
+            },
+            {
+              "keyId": "8bf9b150-aae8-477a-8816-011b3491785f",
+              "type": "ASC"
+            },
+            {
+              "keyId": "901080be-a961-4a5d-bf3c-86561b0d2e84",
+              "type": "ASC"
+            }
+          ],
+          "indxVisibility": "",
+          "indexComment": ""
+        }
+      ],
+      "chkConstr": [
+        {
+          "GUID": "37636250-2e5e-4ff8-8c2b-723178a1acf4",
+          "chkConstrName": "ck_solicitudes_precio",
+          "constrExpression": "servicio_precio >= 0",
+          "constrEnforcement": ""
+        },
+        {
+          "GUID": "9c0ddebe-3f16-409b-8bf4-b8685c79b360",
+          "chkConstrName": "ck_solicitudes_duracion",
+          "constrExpression": "servicio_duracion > 0",
+          "constrEnforcement": ""
+        },
+        {
+          "GUID": "b57b452e-3488-4ed4-a758-84c7c15f11b8",
+          "chkConstrName": "ck_solicitudes_estado",
+          "constrExpression": "\n        (estado <> 'SUGERIDA'  OR fecha_hora_propuesta IS NOT NULL)\n    AND (estado <> 'PENDIENTE' OR fecha_hora_propuesta IS NULL)\n    AND (estado NOT IN ('RECHAZADA','CANCELADA')\n         OR (motivo IS NOT NULL AND CHAR_LENGTH(TRIM(motivo)) > 0))\n  ",
+          "constrEnforcement": ""
+        }
+      ]
+    }
+  ],
+  "buckets": [
+    {
+      "name": "bienestar_en_casa",
+      "type": "bucket",
+      "collectionIds": [
+        "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+        "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+        "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+        "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+        "eb782a64-5e7c-4390-b76b-c581ea7a632c",
+        "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+        "79b3b929-4eb9-48e5-b7a7-27e636d57736",
+        "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc",
+        "e0d23bc3-1224-49cc-92c8-e3b36ee876e9",
+        "1744e6fe-b415-4640-a5ac-04fdf2d3858d",
+        "f39dbb85-a419-4efe-bff2-28f5ec3d91fd",
+        "0528f4df-fb63-4cda-97ea-c9ed93012325"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "ifNotExist": true,
+      "ENCRYPTION": "No",
+      "GUID": "4589cc0d-911b-4e7c-8a6d-9810948795fd",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "UDFs": [],
+      "Procedures": []
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "fk_clientes_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+          "4ff95935-a8b8-4785-8ca9-a19935604271"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "a0a61622-9936-426b-81ab-94cf358f8085",
+      "parentCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+      "childCollection": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "785a26f7-1117-4d1d-947b-b36f8de8fae4",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1284,
+            "y": 1350.6666666666667
+          },
+          {
+            "x": 1424,
+            "y": 1350.6666666666667
+          },
+          {
+            "x": 1424,
+            "y": 1968.3333333333333
+          },
+          {
+            "x": 1564,
+            "y": 1968.3333333333333
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_proveedores_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "fdcd142d-b0e7-4d87-bdf9-3321888ce755",
+      "parentCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+      "childCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "d8254477-b4e2-46ee-a10f-e1cd391ee78c",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1914,
+            "y": 1182.25
+          },
+          {
+            "x": 1883,
+            "y": 1182.25
+          },
+          {
+            "x": 1883,
+            "y": 1995.5
+          },
+          {
+            "x": 1852,
+            "y": 1995.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_direcciones_cliente",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+          "4ff95935-a8b8-4785-8ca9-a19935604271"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+          "33a2e79f-933b-4d89-9429-cd093be3143d"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "91d955fd-634c-4803-bd7d-b669b996c547",
+      "parentCollection": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+      "childCollection": "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "4577b65e-0d81-4a98-953f-d74b2ad7cbc4",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1197.5,
+            "y": 1245
+          },
+          {
+            "x": 1197.5,
+            "y": 1279.5
+          },
+          {
+            "x": 1174,
+            "y": 1279.5
+          },
+          {
+            "x": 1174,
+            "y": 1314
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "fk_zonas_proveedor",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "eb782a64-5e7c-4390-b76b-c581ea7a632c",
+          "ef457673-e0d2-4a87-9851-551ed303c01c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "9720f8a8-9c31-4416-bb8c-ebb252cac7aa",
+      "parentCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "childCollection": "eb782a64-5e7c-4390-b76b-c581ea7a632c",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "7f0eb9df-e317-4310-b9db-4adc60a4ba39",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 2051,
+            "y": 1914
+          },
+          {
+            "x": 2051,
+            "y": 1559.5
+          },
+          {
+            "x": 2115.75,
+            "y": 1559.5
+          },
+          {
+            "x": 2115.75,
+            "y": 1205
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_servicios_proveedor",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "774f422e-0c49-4077-8739-4afa41b5ed80"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "6de2ff2d-91ee-480c-be65-40c6eb5573de",
+      "parentCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "childCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "fa31164a-0c05-455b-b01b-ffa40d74ce13",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1935,
+            "y": 1264
+          },
+          {
+            "x": 1935,
+            "y": 1234.5
+          },
+          {
+            "x": 2048.5,
+            "y": 1234.5
+          },
+          {
+            "x": 2048.5,
+            "y": 1205
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_multimedia_servicio",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "82fea13f-c49a-4203-a466-5ce588013268"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "79b3b929-4eb9-48e5-b7a7-27e636d57736",
+          "4f1c2a1f-a965-4abc-8124-ed404199636a"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "39924924-b4f6-4942-91ee-07cc38839bc2",
+      "parentCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+      "childCollection": "79b3b929-4eb9-48e5-b7a7-27e636d57736",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "e7a35d09-cfa3-4f3d-a186-1ef67a7a7d49",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1698,
+            "y": 1177.5
+          },
+          {
+            "x": 1731,
+            "y": 1177.5
+          },
+          {
+            "x": 1731,
+            "y": 1324.3333333333333
+          },
+          {
+            "x": 1764,
+            "y": 1324.3333333333333
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_insumos_servicio",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "82fea13f-c49a-4203-a466-5ce588013268"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc",
+          "b8d7281b-dc23-45fa-a2c3-ef68472cb6fc"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "ea3067f5-9a09-4e16-9ab9-379dc6468805",
+      "parentCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+      "childCollection": "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "b4580162-5618-454d-97f6-5671a216ba59",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1330,
+            "y": 2027.5
+          },
+          {
+            "x": 1547,
+            "y": 2027.5
+          },
+          {
+            "x": 1547,
+            "y": 1384.6666666666667
+          },
+          {
+            "x": 1764,
+            "y": 1384.6666666666667
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_horarios_proveedor",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "e0d23bc3-1224-49cc-92c8-e3b36ee876e9",
+          "8925ece1-1004-475e-ac7f-e222ae64209b"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "2024c3af-f02a-4cf4-955e-b48b71e5e441",
+      "parentCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "childCollection": "e0d23bc3-1224-49cc-92c8-e3b36ee876e9",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "b4096520-fcfc-4aae-be8d-8e967db2c1f1",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1511,
+            "y": 1827.5
+          },
+          {
+            "x": 1712.5,
+            "y": 1827.5
+          },
+          {
+            "x": 1712.5,
+            "y": 1159.5
+          },
+          {
+            "x": 1914,
+            "y": 1159.5
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_periodos_proveedor",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "1744e6fe-b415-4640-a5ac-04fdf2d3858d",
+          "07974875-7fcd-4487-9db7-87ac5292f410"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "cfb233ae-f072-4c5a-b645-15e0382fec96",
+      "parentCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "childCollection": "1744e6fe-b415-4640-a5ac-04fdf2d3858d",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "2041c2ca-16ad-4ed2-bdc9-bc535a7b168f",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1684,
+            "y": 1377.5
+          },
+          {
+            "x": 1799,
+            "y": 1377.5
+          },
+          {
+            "x": 1799,
+            "y": 1136.75
+          },
+          {
+            "x": 1914,
+            "y": 1136.75
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_recuperacion_usuario",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+          "9bbf6d4f-f172-484a-b3c7-c8ea50558e25"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "f39dbb85-a419-4efe-bff2-28f5ec3d91fd",
+          "07ce5848-7376-4bec-aeae-852f2f253ffc"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "677cf1c5-e21e-4743-bdd2-1da2df27cf29",
+      "parentCollection": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+      "childCollection": "f39dbb85-a419-4efe-bff2-28f5ec3d91fd",
+      "customProperties": {
+        "relationshipOnDelete": "CASCADE"
+      },
+      "hackoladeStyles": {
+        "GUID": "9a736a66-7f05-4404-a004-02b64bf81262",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1472,
+            "y": 1595.5
+          },
+          {
+            "x": 1518,
+            "y": 1595.5
+          },
+          {
+            "x": 1518,
+            "y": 2022.6666666666667
+          },
+          {
+            "x": 1564,
+            "y": 2022.6666666666667
+          }
+        ],
+        "sides": [
+          "right",
+          "left"
+        ]
+      }
+    },
+    {
+      "name": "fk_solicitudes_cliente",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+          "4ff95935-a8b8-4785-8ca9-a19935604271"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0528f4df-fb63-4cda-97ea-c9ed93012325",
+          "08896ffc-0500-4259-8778-e89b27078eac"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "641f880e-42b4-407d-ab2c-df77474923d2",
+      "parentCollection": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+      "childCollection": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "24054dce-b90d-4c7f-9dc2-199953805451",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1564,
+            "y": 1742.6666666666667
+          },
+          {
+            "x": 1424,
+            "y": 1742.6666666666667
+          },
+          {
+            "x": 1424,
+            "y": 1332.3333333333333
+          },
+          {
+            "x": 1284,
+            "y": 1332.3333333333333
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "fk_solicitudes_proveedor",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+          "27b20045-e3ca-4de4-9230-f3e0a881939a"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0528f4df-fb63-4cda-97ea-c9ed93012325",
+          "d651e834-0551-495a-8753-0b4655f5ef91"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "7ff467cb-6ded-495c-a82d-28c72ce07e8d",
+      "parentCollection": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+      "childCollection": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "c81f2c23-cc1b-48dc-a010-ae9311f3c3e0",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1807.3333333333333,
+            "y": 1514
+          },
+          {
+            "x": 1807.3333333333333,
+            "y": 1359.5
+          },
+          {
+            "x": 1981.25,
+            "y": 1359.5
+          },
+          {
+            "x": 1981.25,
+            "y": 1205
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_solicitudes_servicio",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+          "82fea13f-c49a-4203-a466-5ce588013268"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0528f4df-fb63-4cda-97ea-c9ed93012325",
+          "76c9cc0f-898d-422f-ab7c-7b5798e2ac9c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "bdc457d7-364e-4faa-8d0f-04f044f268ac",
+      "parentCollection": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+      "childCollection": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "53c2ab58-20c5-4042-a91d-00ac17653df4",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1685.6666666666667,
+            "y": 1514
+          },
+          {
+            "x": 1685.6666666666667,
+            "y": 1479.5
+          },
+          {
+            "x": 1935,
+            "y": 1479.5
+          },
+          {
+            "x": 1935,
+            "y": 1445
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "fk_solicitudes_direccion",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+          "c289aa63-1ab3-44d9-ad80-bf9bf750680b"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "0528f4df-fb63-4cda-97ea-c9ed93012325",
+          "a1c09308-d980-4384-ab94-fa96da3cd231"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "37a7f523-6575-4ed6-93cb-e7b97e4c930d",
+      "parentCollection": "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+      "childCollection": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+      "customProperties": {
+        "relationshipOnDelete": "RESTRICT"
+      },
+      "hackoladeStyles": {
+        "GUID": "2aac80ea-435e-45e5-90c2-845f8432d826",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 1564,
+            "y": 1628.3333333333333
+          },
+          {
+            "x": 1447.5,
+            "y": 1628.3333333333333
+          },
+          {
+            "x": 1447.5,
+            "y": 1154.5
+          },
+          {
+            "x": 1331,
+            "y": 1154.5
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "4589cc0d-911b-4e7c-8a6d-9810948795fd": "bienestar_en_casa",
+    "9bbf6d4f-f172-484a-b3c7-c8ea50558e25": "id",
+    "794e926c-fc40-4620-b22e-80b2959b4264": "email",
+    "89fb588c-a792-4ae3-810b-1e50e3b5bcd8": "password_hash",
+    "6991c630-c262-4f19-95f1-f6e9f1ac9548": "tipo",
+    "c5805b24-8e76-4509-abf5-aff533222961": "nombre",
+    "3250bf25-8239-4af0-ae7f-ebedaa3b363b": "telefono",
+    "6fea8f20-26d9-4bc8-aebe-47a75b8215f1": "fecha_registro",
+    "018a4ea9-14c5-4448-99f7-ac5f9a75e036": "usuarios",
+    "4ff95935-a8b8-4785-8ca9-a19935604271": "usuario_id",
+    "ad3a847f-44b6-4c94-bd85-9a017c3f4559": "clientes",
+    "27b20045-e3ca-4de4-9230-f3e0a881939a": "usuario_id",
+    "5183f5a3-9da5-488f-9cb5-38c69a71b02e": "biografia",
+    "3ce531f1-439b-4b36-bada-556201fcea8e": "anios_experiencia",
+    "5444e9ee-2402-4937-84ac-6129c57d3aaf": "proveedores",
+    "c289aa63-1ab3-44d9-ad80-bf9bf750680b": "id",
+    "33a2e79f-933b-4d89-9429-cd093be3143d": "cliente_id",
+    "542dab2a-25a8-4fbe-a83b-d3c502d57b67": "ciudad",
+    "4f0e8ad8-ff8a-454c-87bf-c3d86bc9aca6": "barrio",
+    "8ff2c659-4865-4f73-96d6-80a819806ddc": "calle",
+    "df5fec39-f875-47d0-9e54-69db71fa1499": "numero",
+    "0c78bbdb-3bd6-46b3-abee-360d8f3ce882": "referencia",
+    "833b0173-c97d-449c-a300-e9fe52a7fd46": "es_principal",
+    "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8": "direcciones",
+    "3cc416e4-1acb-43b9-8913-65f424b1820c": "id",
+    "ef457673-e0d2-4a87-9851-551ed303c01c": "proveedor_id",
+    "eb65bb68-99d9-4d0c-8ea1-fc1c3778b5bb": "ciudad",
+    "ff0f4a5c-0d9c-45ba-87e9-85d9333882e5": "barrio_sector",
+    "eb782a64-5e7c-4390-b76b-c581ea7a632c": "zonas_cobertura",
+    "82fea13f-c49a-4203-a466-5ce588013268": "id",
+    "774f422e-0c49-4077-8739-4afa41b5ed80": "proveedor_id",
+    "9f702e38-5279-40d7-94b0-ed46fdd2ac9e": "nombre",
+    "90580e4d-24bd-4c09-9794-b10a70f0518d": "categoria",
+    "36184a1a-e68c-4549-99b1-96c9fb45fb1b": "descripcion",
+    "f3d099a7-982c-4d5b-994c-41a156299804": "duracion_minutos",
+    "05d0add6-47d9-42e7-b582-223c0669c326": "precio",
+    "a618d481-24a8-4dba-b663-6162ad36163a": "estado",
+    "89fb35d0-d3e2-4016-81da-a738d7e2ef8b": "servicios",
+    "cf35e37f-fec5-4aea-8736-24f0ba971968": "id",
+    "4f1c2a1f-a965-4abc-8124-ed404199636a": "servicio_id",
+    "a8bb6a7a-ed80-4450-be32-41bcb5d0de11": "tipo",
+    "f26b47bf-073c-447c-b185-a30a773fe293": "url",
+    "09fc9bd8-764e-4f74-830a-93da82594ba2": "orden",
+    "79b3b929-4eb9-48e5-b7a7-27e636d57736": "servicios_multimedia",
+    "90f8f0a8-0627-4065-aaed-86426722a126": "id",
+    "b8d7281b-dc23-45fa-a2c3-ef68472cb6fc": "servicio_id",
+    "7bbb59f6-e2f5-45b3-b4c2-e8ce9ce5e443": "tipo",
+    "e19f2ddf-02d2-40f6-82af-1ed7fe44adbe": "nombre",
+    "318d750a-b285-421a-b4e2-8d9a38b21b6c": "descripcion",
+    "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc": "servicios_insumos",
+    "c8ef4fd1-df27-4e58-94dc-e0985333094d": "id",
+    "8925ece1-1004-475e-ac7f-e222ae64209b": "proveedor_id",
+    "20e8ebd4-e0ee-420e-af01-12278cbfc4a5": "dia_semana",
+    "b7577846-f825-48e3-8751-35005d557625": "hora_inicio",
+    "907f2626-6028-4eb7-b0aa-f488ab45d4bb": "hora_fin",
+    "e0d23bc3-1224-49cc-92c8-e3b36ee876e9": "horarios_disponibilidad",
+    "aa88f5b1-8cc7-4f77-bf9b-5850ee6ddff7": "id",
+    "07974875-7fcd-4487-9db7-87ac5292f410": "proveedor_id",
+    "f9902402-349b-42ca-a476-198ae57aa6d2": "fecha_inicio",
+    "0c68b2a2-b983-454d-a71f-297834de5e57": "fecha_fin",
+    "9e7954c5-3d5c-4c6c-83d7-b1d435d5ae95": "motivo",
+    "1744e6fe-b415-4640-a5ac-04fdf2d3858d": "periodos_no_disponibilidad",
+    "c006180b-351f-42e8-a963-0e2e9b8eacfa": "id",
+    "07ce5848-7376-4bec-aeae-852f2f253ffc": "usuario_id",
+    "90f427c5-b407-49dd-8a4a-b2ba84b78322": "codigo",
+    "c25085ed-389e-4596-865c-aec90670f1b6": "fecha_expiracion",
+    "0bb8e936-b04e-4b0c-b05b-b5f41e1f9f80": "fecha_uso",
+    "10ea2318-22ce-42db-b5b1-b7e3ff5a609d": "fecha_creacion",
+    "6232b42f-4169-4e40-b101-82baa3ce76ad": "invalidado",
+    "f39dbb85-a419-4efe-bff2-28f5ec3d91fd": "recuperacion_contrasena",
+    "844f9eef-b15f-403b-834e-d33d222808d6": "id",
+    "08896ffc-0500-4259-8778-e89b27078eac": "cliente_id",
+    "d651e834-0551-495a-8753-0b4655f5ef91": "proveedor_id",
+    "76c9cc0f-898d-422f-ab7c-7b5798e2ac9c": "servicio_id",
+    "809c6ba7-ec32-4694-a08c-29b399fd28aa": "servicio_nombre",
+    "258111e5-44da-4793-8a17-9555761720ef": "servicio_precio",
+    "c033e710-b78e-4c6c-a06e-a604373e8c1c": "servicio_duracion",
+    "a1c09308-d980-4384-ab94-fa96da3cd231": "direccion_id",
+    "45691c29-30ce-4882-8647-e85e03ac90de": "barrio_sector",
+    "492450ed-7da4-4dc3-855b-e7c60c416a10": "info_localizacion",
+    "69a9be37-d4f6-49cd-878d-b020ab83eaa7": "observaciones",
+    "901080be-a961-4a5d-bf3c-86561b0d2e84": "fecha_hora_inicio",
+    "5eebe5eb-ce32-4586-a9b2-4598261bf031": "fecha_hora_propuesta",
+    "8bf9b150-aae8-477a-8816-011b3491785f": "estado",
+    "659f3a43-dfd4-41d5-94a3-0d18d81019b0": "motivo",
+    "4e250127-f39d-408c-adf5-a899b81065fc": "fecha_creacion",
+    "1a303f2d-97fa-4b39-ad04-9ada92684a17": "fecha_actualizacion",
+    "0528f4df-fb63-4cda-97ea-c9ed93012325": "solicitudes",
+    "a0a61622-9936-426b-81ab-94cf358f8085": "fk_clientes_usuario",
+    "fdcd142d-b0e7-4d87-bdf9-3321888ce755": "fk_proveedores_usuario",
+    "91d955fd-634c-4803-bd7d-b669b996c547": "fk_direcciones_cliente",
+    "9720f8a8-9c31-4416-bb8c-ebb252cac7aa": "fk_zonas_proveedor",
+    "6de2ff2d-91ee-480c-be65-40c6eb5573de": "fk_servicios_proveedor",
+    "39924924-b4f6-4942-91ee-07cc38839bc2": "fk_multimedia_servicio",
+    "ea3067f5-9a09-4e16-9ab9-379dc6468805": "fk_insumos_servicio",
+    "2024c3af-f02a-4cf4-955e-b48b71e5e441": "fk_horarios_proveedor",
+    "cfb233ae-f072-4c5a-b645-15e0382fec96": "fk_periodos_proveedor",
+    "677cf1c5-e21e-4743-bdd2-1da2df27cf29": "fk_recuperacion_usuario",
+    "641f880e-42b4-407d-ab2c-df77474923d2": "fk_solicitudes_cliente",
+    "7ff467cb-6ded-495c-a82d-28c72ce07e8d": "fk_solicitudes_proveedor",
+    "bdc457d7-364e-4faa-8d0f-04f044f268ac": "fk_solicitudes_servicio",
+    "37a7f523-6575-4ed6-93cb-e7b97e4c930d": "fk_solicitudes_direccion"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "e9ffbfac-c6aa-4c70-8415-62fcf629508d"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "a12782a1-a388-4bcf-8e8d-3ab3aeba5342"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "7ac82c21-d0a6-4c37-8f53-b7e3018d19b7"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
+  "dbVersion": "v9.x",
+  "dbVendor": "MySQL",
+  "appTarget": "MySQL",
+  "creationTS": "2026-11-23T19:40:16.696Z",
+  "GUID": "3cd8c72c-da53-4220-a59c-7f34ed8e4b56",
+  "isLineageEnabled": false,
+  "lastModifTS": "2026-11-23T19:41:22.245Z",
+  "persistenceSchemaVersion": "9",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginName": "MySQL",
+    "pluginVersion": "0.2.29",
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "9.0.1"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "018a4ea9-14c5-4448-99f7-ac5f9a75e036",
+            "x": 1564,
+            "y": 1914,
+            "width": 288,
+            "height": 163,
+            "color": {}
+          },
+          {
+            "GUID": "ad3a847f-44b6-4c94-bd85-9a017c3f4559",
+            "x": 1064,
+            "y": 1314,
+            "width": 220,
+            "height": 55,
+            "color": {}
+          },
+          {
+            "GUID": "5444e9ee-2402-4937-84ac-6129c57d3aaf",
+            "x": 1914,
+            "y": 1114,
+            "width": 269,
+            "height": 91,
+            "color": {}
+          },
+          {
+            "GUID": "f4803f6f-593b-4a60-9c0d-13cc8b9dcfd8",
+            "x": 1064,
+            "y": 1064,
+            "width": 267,
+            "height": 181,
+            "color": {}
+          },
+          {
+            "GUID": "eb782a64-5e7c-4390-b76b-c581ea7a632c",
+            "x": 1914,
+            "y": 1914,
+            "width": 274,
+            "height": 109,
+            "color": {}
+          },
+          {
+            "GUID": "89fb35d0-d3e2-4016-81da-a738d7e2ef8b",
+            "x": 1764,
+            "y": 1264,
+            "width": 342,
+            "height": 181,
+            "color": {}
+          },
+          {
+            "GUID": "79b3b929-4eb9-48e5-b7a7-27e636d57736",
+            "x": 1414,
+            "y": 1114,
+            "width": 284,
+            "height": 127,
+            "color": {}
+          },
+          {
+            "GUID": "00af04ce-3dc5-4dd9-80ac-63db2e6f90bc",
+            "x": 1064,
+            "y": 1964,
+            "width": 266,
+            "height": 127,
+            "color": {}
+          },
+          {
+            "GUID": "e0d23bc3-1224-49cc-92c8-e3b36ee876e9",
+            "x": 1214,
+            "y": 1764,
+            "width": 297,
+            "height": 127,
+            "color": {}
+          },
+          {
+            "GUID": "1744e6fe-b415-4640-a5ac-04fdf2d3858d",
+            "x": 1364,
+            "y": 1314,
+            "width": 320,
+            "height": 127,
+            "color": {}
+          },
+          {
+            "GUID": "f39dbb85-a419-4efe-bff2-28f5ec3d91fd",
+            "x": 1164,
+            "y": 1514,
+            "width": 308,
+            "height": 163,
+            "color": {}
+          },
+          {
+            "GUID": "0528f4df-fb63-4cda-97ea-c9ed93012325",
+            "x": 1564,
+            "y": 1514,
+            "width": 365,
+            "height": 343,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 1000,
+            "y": 1000,
+            "GUID": "4589cc0d-911b-4e7c-8a6d-9810948795fd"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}

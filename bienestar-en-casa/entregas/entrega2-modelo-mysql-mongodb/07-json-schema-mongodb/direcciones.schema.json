@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bienestar-en-casa.local/schemas/direcciones.schema.json",
+  "title": "direcciones",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "cliente_id": {
+      "type": [
+        "integer",
+        "string"
+      ]
+    },
+    "ciudad": {
+      "type": "string",
+      "maxLength": 80
+    },
+    "barrio": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "calle": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "numero": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "referencia": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "es_principal": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "cliente_id",
+    "ciudad",
+    "calle",
+    "es_principal"
+  ]
+}

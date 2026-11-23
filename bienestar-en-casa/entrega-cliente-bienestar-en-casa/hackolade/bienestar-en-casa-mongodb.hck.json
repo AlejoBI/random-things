@@ -1,0 +1,2464 @@
+{
+  "modelName": "bienestar-en-casa-mongodb",
+  "collections": [
+    {
+      "collectionName": "direcciones",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "f107f94e-f03b-4cac-9eb0-81fd8baa80e0",
+          "required": true,
+          "childRelationships": [
+            "c11c35c1-c33b-4b04-a24c-38302df3fdae"
+          ]
+        },
+        {
+          "code": "",
+          "name": "cliente_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "59e085dc-c60e-4317-a5c7-b38935aac075"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "17367fd8-45df-4b20-a36c-c4e1dcdc160a"
+            }
+          ],
+          "GUID": "80873717-36de-4f6d-b247-9df39d27595a",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "f5b75ff8-6145-4433-b4da-70ec0445504e"
+        },
+        {
+          "code": "",
+          "name": "ciudad",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 80,
+          "GUID": "026ce125-9b0b-4497-aa1b-42ca985e22c8",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "barrio",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "5ab4ccb2-1060-445c-bfd3-83a8198d4840"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "5007a1ce-61fb-4c7d-8528-857a901da4f9"
+            }
+          ],
+          "GUID": "4fe93edf-8b62-43d6-831f-e7c0fffea0e4",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "calle",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 120,
+          "GUID": "ad288f7c-8ba6-4cbc-8bf8-8ab1b7e885c2",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "numero",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "07dd6520-cc23-449f-985b-689afabe5561"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "474247b5-3e80-4dba-a9d0-e8375dc47873"
+            }
+          ],
+          "GUID": "a5fa38c1-be6f-429a-8ca0-cfc738e017b7",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "referencia",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "3eb16bc6-56cf-4615-9ad7-ec3972549bb7"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "3e1a0173-696a-4418-bf7c-e0e6ef7a1cec"
+            }
+          ],
+          "GUID": "dc49877b-1f06-4065-b51d-c86943f72377",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "es_principal",
+          "isActivated": true,
+          "type": "boolean",
+          "GUID": "3f6a1efb-42ec-42b4-96e1-5b8f4f8858eb",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "31aafaf1-2a07-43af-a8bd-d459ab43e42b",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+      "code": "direcciones.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/direcciones.schema.json",
+      "bucketId": "24765b63-69ba-41a5-bf92-ec6c635c6461",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "horarios_disponibilidad",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "1fb91faf-c956-4b75-a4a0-039c78f82ee5",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "7010b2d1-b9b4-4f7a-86bb-ddbf1a501faa"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "e691ad56-f29f-4fc0-b7f0-03da2bc340c8"
+            }
+          ],
+          "GUID": "ed23780d-3d2a-495d-a793-eeabcf7ec335",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "9611f71e-b794-43b4-a787-1a2ae1236c6b"
+        },
+        {
+          "code": "",
+          "name": "dia_semana",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "LUNES",
+            "MARTES",
+            "MIERCOLES",
+            "JUEVES",
+            "VIERNES",
+            "SABADO",
+            "DOMINGO"
+          ],
+          "GUID": "cfac7744-0566-4b73-bfda-d7186221e96c",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "hora_inicio",
+          "isActivated": true,
+          "type": "string",
+          "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9]$",
+          "GUID": "2c290a8c-a9c4-4b41-94da-c07555f47e8b",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "hora_fin",
+          "isActivated": true,
+          "type": "string",
+          "pattern": "^[0-2][0-9]:[0-5][0-9]:[0-5][0-9]$",
+          "GUID": "9a7fdcd4-b792-4b36-a0f5-f3a54f78be1d",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "fa42b53b-ed0f-4d3a-a3b0-0f2aaca59145",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "5ee931f9-21a0-443f-8d92-cd8cf6b969cd",
+      "code": "horarios_disponibilidad.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/horarios_disponibilidad.schema.json",
+      "bucketId": "50e6fd42-d8ef-4b9d-87dd-8bab0408bf3f",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "periodos_no_disponibilidad",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "7bc223b9-193a-4d0c-a7ad-9e16f5b5e351",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "1e507e40-79a6-4de4-83e5-538e276cd8e5"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "d72d5966-1cc4-4bba-84f0-479f2d5e1d4d"
+            }
+          ],
+          "GUID": "87425bd5-0dad-4022-ad4a-2b48ba00988a",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "9b4d172b-cf77-4768-82b5-f3315dad8c6e"
+        },
+        {
+          "code": "",
+          "name": "fecha_inicio",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "20fb7b3c-f370-47b8-a5c6-19ac0e6bb51b",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "fecha_fin",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "c92e4a0d-7fe5-4dba-a443-b5e27cc6de73",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "motivo",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "7829132f-a9a7-44fb-b444-bf98d0570892"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "eeba0024-988e-48b8-a787-a1842f04cfd7"
+            }
+          ],
+          "GUID": "dff27b77-ae2f-479f-8178-63db47206a5a",
+          "required": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "8aef6d3d-09b5-407e-b2e2-73400046fb4d",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "760fcff5-5c0a-43aa-8dec-23e790720363",
+      "code": "periodos_no_disponibilidad.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/periodos_no_disponibilidad.schema.json",
+      "bucketId": "445f6aa6-fd43-4dc7-9a35-14ae8bf12bbb",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "recuperacion_contrasena",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "b2e29c71-7c28-4564-919e-d94a47d38e13",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "usuario_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "718f3ff7-0802-4233-9446-f80e292f700d"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "fb309d7b-4d7c-4547-86f0-4330518d53df"
+            }
+          ],
+          "GUID": "bdf8ffbc-3d3c-44ee-9e81-77ff6c63cde6",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "91959576-0786-432c-8d12-4467758ad6b7"
+        },
+        {
+          "code": "",
+          "name": "codigo",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 20,
+          "GUID": "7540e6f5-12b0-4eda-8811-ec6081d811a3",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "fecha_expiracion",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "c6f4ba7f-6734-4614-9c82-3be574c1c7b6",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "fecha_uso",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "3f3d5da8-0059-4f9b-b551-be9edc871dda",
+              "format": "date-time"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "17fc0bb5-f414-4cb8-b65c-e3ba2434a55b"
+            }
+          ],
+          "GUID": "87d86f97-29c9-4306-a39e-8f7133d39578",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "fecha_creacion",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "7991b8d9-d43a-4c6c-b5c8-53e6d84f40d0",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "invalidado",
+          "isActivated": true,
+          "type": "boolean",
+          "GUID": "1e160b41-ae3b-4c80-beb1-1d712363ffdf",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "0f17457e-79e0-40f1-8798-d23917d28464",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "6216225e-8426-48da-abdb-dd57d975b7ad",
+      "code": "recuperacion_contrasena.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/recuperacion_contrasena.schema.json",
+      "bucketId": "27f2c19a-fdb2-4f88-bf22-3ec61ab580d6",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "servicios",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "4d0ab7c8-9c20-4be0-a503-03357ddd809d",
+          "required": true,
+          "childRelationships": [
+            "c299ddbe-0561-4b5f-9329-aedc5623cb9f"
+          ]
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "87d778d2-6bbe-4a2f-b3c3-3e4e30a02e6b"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "44e7328d-130f-4c2e-9e68-96095593f849"
+            }
+          ],
+          "GUID": "31858067-4047-4d1a-a46f-d1d9285b64d0",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "abf9a58f-005e-4b14-a718-520a3dded7c8"
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 100,
+          "GUID": "6696eb11-5087-455e-be2d-263640428770",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "categoria",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 80,
+          "GUID": "6c0c9d37-af7c-47a5-be30-41e276c7a6d1",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "descripcion",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "52a3a470-44ab-4246-859d-39c320a07210"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "38a49f6f-45eb-4d9e-a8b8-00451e91ffe8"
+            }
+          ],
+          "GUID": "00915e0f-94c0-4b70-95ab-e5fcbc3bbb32",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "duracion_minutos",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "8759ddbe-fcb1-450f-b032-07c7e434b4d0",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "precio",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 0,
+          "GUID": "49ca4de8-c14c-403c-a0ef-efb45520bda9",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "ACTIVO",
+            "INACTIVO"
+          ],
+          "GUID": "fa625187-4b02-4f59-9762-1996636c64a3",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "multimedia",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "id",
+                  "isActivated": true,
+                  "type": "numeric",
+                  "minimum": 1,
+                  "GUID": "1b461e20-9f46-481d-8102-944787bb47a4",
+                  "required": false
+                },
+                {
+                  "code": "",
+                  "name": "tipo",
+                  "isActivated": true,
+                  "type": "string",
+                  "enum": [
+                    "FOTO",
+                    "VIDEO"
+                  ],
+                  "GUID": "96316b14-5070-4d92-aff3-498f92392394",
+                  "required": true
+                },
+                {
+                  "code": "",
+                  "name": "url",
+                  "isActivated": true,
+                  "type": "string",
+                  "format": "uri",
+                  "GUID": "9d35d383-1608-4431-81a3-dc68c9d1159a",
+                  "required": true
+                },
+                {
+                  "code": "",
+                  "name": "orden",
+                  "isActivated": true,
+                  "type": "numeric",
+                  "minimum": 1,
+                  "GUID": "e4b3778a-ef37-4a91-8f86-199096287487",
+                  "required": true
+                }
+              ],
+              "additionalProperties": true,
+              "GUID": "00853bb2-ded7-4e3e-ba87-40bbc94fcd7b",
+              "arrayItem": true
+            }
+          ],
+          "additionalItems": true,
+          "GUID": "d7403015-3030-4837-9429-55904ee469e5",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "insumos",
+          "isActivated": true,
+          "type": "array",
+          "properties": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "id",
+                  "isActivated": true,
+                  "type": "numeric",
+                  "minimum": 1,
+                  "GUID": "cd3d8af0-8add-420c-8e80-9964fc310ade",
+                  "required": false
+                },
+                {
+                  "code": "",
+                  "name": "tipo",
+                  "isActivated": true,
+                  "type": "string",
+                  "enum": [
+                    "PRODUCTO",
+                    "INSUMO",
+                    "EQUIPO"
+                  ],
+                  "GUID": "9fc3a8e7-fc32-458f-aab2-4df42bcc4ece",
+                  "required": true
+                },
+                {
+                  "code": "",
+                  "name": "nombre",
+                  "isActivated": true,
+                  "type": "string",
+                  "maxLength": 150,
+                  "GUID": "3fee8233-d43e-4588-91d5-0feaa4742b92",
+                  "required": true
+                },
+                {
+                  "code": "",
+                  "name": "descripcion",
+                  "isActivated": true,
+                  "type": "multiple",
+                  "multipleTypes": [
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "string",
+                      "GUID": "4a702a33-81c1-459f-b0f9-cf896eed0bd4"
+                    },
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "null",
+                      "GUID": "c1073068-a8b1-41d7-94b7-45c9a5e944d9"
+                    }
+                  ],
+                  "GUID": "e4f703fa-4597-4b7c-9755-f38cc0d11030",
+                  "required": false
+                }
+              ],
+              "additionalProperties": true,
+              "GUID": "c3698cf2-d688-409a-a5a6-11eddcc1988b",
+              "arrayItem": true
+            }
+          ],
+          "additionalItems": true,
+          "GUID": "3fbdae1d-0b6b-4cb1-97c9-56011a5efa0f",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "ebd4b6cb-a9ba-4a2a-b536-811efccb645e",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "88807cda-7184-44a3-9e49-f829962a8bee",
+      "code": "servicios.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/servicios.schema.json",
+      "bucketId": "3e978350-144b-4325-872b-976d91489f86",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "solicitudes",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "dbb32b39-3992-487c-8e8d-521b6d96f8e2",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "cliente_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "c57b17ef-7f1b-452f-82e3-470abd5ffd89"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "2ad96217-8784-4c8b-9d0a-fb1c24c6f09c"
+            }
+          ],
+          "GUID": "710cb8b2-512b-40e9-8cf1-e6629d0d8e5d",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "8785bff4-6470-4f04-8de5-0403e680017b"
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "7d4e18d2-afbe-4d31-8203-040c20872eed"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "84ef9574-c51e-4f74-895d-e5a576fca99c"
+            }
+          ],
+          "GUID": "ac5e56c8-7037-46a5-a670-3bb5fcf1449c",
+          "required": true,
+          "error": {}
+        },
+        {
+          "code": "",
+          "name": "servicio_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "00848027-7816-49d2-b8e5-1adbbe93d5b8"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "a19c8933-2f86-40ea-ad1f-79ac6cdc1c24"
+            }
+          ],
+          "GUID": "7f8b5ad8-485c-4891-b3b7-8198ecb17c73",
+          "required": true,
+          "parentRelationship": "c299ddbe-0561-4b5f-9329-aedc5623cb9f",
+          "error": {},
+          "foreignCollection": "88807cda-7184-44a3-9e49-f829962a8bee",
+          "relationshipType": "Foreign Key",
+          "foreignField": [
+            "88807cda-7184-44a3-9e49-f829962a8bee",
+            "4d0ab7c8-9c20-4be0-a503-03357ddd809d"
+          ]
+        },
+        {
+          "code": "",
+          "name": "servicio_nombre",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 100,
+          "GUID": "ed2a8e1d-26e5-43e3-81c1-13c97563966d",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "servicio_precio",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 0,
+          "GUID": "f3b8afec-8bde-4bcb-9881-f90697ade181",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "servicio_duracion",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "e4f11f53-cdc5-4c5d-8dfc-f0cee508ad43",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "direccion_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "a158b156-891f-47f8-9a8e-a3214d25d9b3"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "845bb0a1-1e5b-4eb9-943b-c6ad312ae290"
+            }
+          ],
+          "GUID": "7060582c-4ade-4ece-9e70-f22e91c1b3df",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+          "foreignField": [
+            "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+            "f107f94e-f03b-4cac-9eb0-81fd8baa80e0"
+          ],
+          "parentRelationship": "c11c35c1-c33b-4b04-a24c-38302df3fdae"
+        },
+        {
+          "code": "",
+          "name": "barrio_sector",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "94ae264f-3179-4927-9a8d-1c116b873878"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "7b7bcf49-8679-4185-8f61-d2e7f0d65ed3"
+            }
+          ],
+          "GUID": "a1b07c3d-4a09-458f-bf45-a457f86fdfd6",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "info_localizacion",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "c3862d87-f681-4a21-8c55-b02a822dd6b0"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "b1ea3ee8-37d6-45e1-b0e3-1bac05b54513"
+            }
+          ],
+          "GUID": "0ec51770-1619-4731-a9bd-b4f18b4e2578",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "observaciones",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "888cb97a-1244-4978-bea0-00f4d3f4e971"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "712e4e6c-904e-47ae-8c5e-ef529a9f9e7d"
+            }
+          ],
+          "GUID": "eeb72d03-a1b3-4a3d-94f8-afbcbf10bc84",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "fecha_hora_inicio",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "40b8855a-83e6-4687-aa04-9a5728fd9d23",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "fecha_hora_propuesta",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "e8d6bb32-b3a4-46fc-83a6-3088cac94d9d",
+              "format": "date-time"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "bf646ed7-d7e3-40e5-967c-2ed249c8cf06"
+            }
+          ],
+          "GUID": "c0a64482-372b-4cd6-a6e1-6014c24526f4",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "estado",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "PENDIENTE",
+            "SUGERIDA",
+            "ACEPTADA",
+            "RECHAZADA",
+            "CANCELADA",
+            "COMPLETADA"
+          ],
+          "GUID": "cd2246f2-ab02-4700-9e3c-3baad1305cd7",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "motivo",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "3ad0d4da-fa61-43be-bbf6-d7d025eae44f"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "b03c798a-d5ca-4a65-acd9-640369bc74a6"
+            }
+          ],
+          "GUID": "b0f42a45-fdf0-4737-9350-e684ae320a85",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "fecha_creacion",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "f8217bf3-24db-4d9b-b7ba-34a8bc20f67e",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "fecha_actualizacion",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "560aedac-3496-43b9-b06b-4726005d5f20",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "9354c9f1-b361-4b72-aa50-65a29720ad93",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+      "code": "solicitudes.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/solicitudes.schema.json",
+      "bucketId": "96d65277-1194-4f58-812e-33ff9e0f7e15",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "usuarios",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "62d0d7fe-aa9b-4b11-a340-20071e0dd859",
+          "required": true,
+          "error": {},
+          "childRelationships": [
+            "f5b75ff8-6145-4433-b4da-70ec0445504e",
+            "317312ac-9bf7-404e-abae-15eca35c5578",
+            "abf9a58f-005e-4b14-a718-520a3dded7c8",
+            "9611f71e-b794-43b4-a787-1a2ae1236c6b",
+            "9b4d172b-cf77-4768-82b5-f3315dad8c6e",
+            "91959576-0786-432c-8d12-4467758ad6b7",
+            "8785bff4-6470-4f04-8de5-0403e680017b",
+            "202b7f06-7221-4696-8b91-909297bed910"
+          ]
+        },
+        {
+          "code": "",
+          "name": "email",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 120,
+          "format": "email",
+          "GUID": "4903d8f2-85e9-487c-a7a4-3bb65ab6b33d",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "password_hash",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 255,
+          "GUID": "2d564231-d19d-44d0-8350-ee4459ed5794",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "tipo",
+          "isActivated": true,
+          "type": "string",
+          "enum": [
+            "CLIENTE",
+            "PROVEEDOR"
+          ],
+          "GUID": "cc74f0a8-3284-4835-9be1-d82935b345a9",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "nombre",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 100,
+          "GUID": "bb4c2c70-08a2-4210-8efa-41eead57221e",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "telefono",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "eea6d2c3-8b04-4e50-9e87-cb1a5c4a3bc3"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "8f8dd0d2-ba20-436a-9cd4-3f967065da81"
+            }
+          ],
+          "GUID": "4b17d7dd-da63-4b94-9a1a-44c2febfcc33",
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "fecha_registro",
+          "isActivated": true,
+          "type": "string",
+          "format": "date-time",
+          "GUID": "61a72b6a-5bf0-41df-9276-4abde64dd13b",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "cliente",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "additionalProperties": true,
+              "GUID": "d1f3e976-d7fc-416c-a88a-f4f153377860"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "957a4452-5d27-486c-bc86-d52389cccd25"
+            }
+          ],
+          "GUID": "09cbf574-2d92-424e-8043-498f7b9adab2",
+          "properties": [
+            {
+              "name": "properties",
+              "properties": [],
+              "type": "document",
+              "childType": "multipleDocument",
+              "hackoladeMeta": {
+                "disableAppend": true,
+                "disableDelete": true,
+                "disableReference": true
+              },
+              "GUID": "bf1e0992-cd4e-4964-90e9-5228a4ecabdc",
+              "multipleParentType": "document"
+            }
+          ],
+          "required": false
+        },
+        {
+          "code": "",
+          "name": "proveedor",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "document",
+              "additionalProperties": true,
+              "GUID": "515bd73b-8cf6-40d9-a30f-4feec91739d2"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "null",
+              "GUID": "f17dd77e-c81d-42fd-98a4-36eb87bda929"
+            }
+          ],
+          "GUID": "f1e9ae14-f68d-4e35-9191-181a470c5752",
+          "properties": [
+            {
+              "name": "properties",
+              "properties": [
+                {
+                  "code": "",
+                  "name": "biografia",
+                  "isActivated": true,
+                  "type": "multiple",
+                  "multipleTypes": [
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "string",
+                      "GUID": "42cc08fb-ef3b-42d6-9890-c9b3dc751857"
+                    },
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "null",
+                      "GUID": "503b9f93-82da-4957-8cb4-6d415314aa24"
+                    }
+                  ],
+                  "GUID": "1bda4273-8375-494d-8d34-d4e081a072ef"
+                },
+                {
+                  "code": "",
+                  "name": "anios_experiencia",
+                  "isActivated": true,
+                  "type": "multiple",
+                  "multipleTypes": [
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "numeric",
+                      "GUID": "200f1554-0c37-427b-913b-5936c4f96202"
+                    },
+                    {
+                      "hackoladeMeta": {},
+                      "isActivated": true,
+                      "type": "null",
+                      "GUID": "0010e968-032a-479e-8e01-88402e23b0bc"
+                    }
+                  ],
+                  "GUID": "4b02da77-1de9-4dfb-9055-936210b9298f"
+                }
+              ],
+              "type": "document",
+              "childType": "multipleDocument",
+              "hackoladeMeta": {
+                "disableAppend": true,
+                "disableDelete": true,
+                "disableReference": true
+              },
+              "GUID": "0895f9aa-aa68-4212-9f07-e5dd166fae25",
+              "multipleParentType": "document"
+            }
+          ],
+          "required": false
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "cbebd93f-823a-40c4-b251-73cf68e3a4bb",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "code": "usuarios.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/usuarios.schema.json",
+      "bucketId": "b8eef5b3-7fd5-4ce7-9710-459f26e87b9f",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    },
+    {
+      "collectionName": "zonas_cobertura",
+      "type": "object",
+      "properties": [
+        {
+          "code": "",
+          "name": "id",
+          "isActivated": true,
+          "type": "numeric",
+          "minimum": 1,
+          "GUID": "c55241e7-c271-4a26-a1b9-32c19ba85b7e",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "proveedor_id",
+          "isActivated": true,
+          "type": "multiple",
+          "multipleTypes": [
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "numeric",
+              "GUID": "8ae9d33e-695e-43d9-a23a-2e9f3af54ed9"
+            },
+            {
+              "hackoladeMeta": {},
+              "isActivated": true,
+              "type": "string",
+              "GUID": "32669e26-2072-4fa4-8a5a-28fd322a3a58"
+            }
+          ],
+          "GUID": "90af4029-95c4-4859-86e0-45f23f63eb9b",
+          "required": true,
+          "relationshipType": "Foreign Key",
+          "error": {},
+          "foreignCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "foreignField": [
+            "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+          ],
+          "parentRelationship": "317312ac-9bf7-404e-abae-15eca35c5578"
+        },
+        {
+          "code": "",
+          "name": "ciudad",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 80,
+          "GUID": "2d8e1567-5fb6-4f3b-8137-398cd4742024",
+          "required": true
+        },
+        {
+          "code": "",
+          "name": "barrio_sector",
+          "isActivated": true,
+          "type": "string",
+          "maxLength": 100,
+          "GUID": "9d8d6200-5476-41d9-a0f9-1f324b53d6bd",
+          "required": true
+        }
+      ],
+      "definitions": {
+        "type": "definitions",
+        "GUID": "ad0a3c46-09e0-432f-ab1f-e3d362fae490",
+        "properties": []
+      },
+      "isActivated": true,
+      "additionalProperties": true,
+      "validationLevel": "Off",
+      "validationAction": "Warn",
+      "storageEngineName": "WiredTiger",
+      "collectionUsers": [],
+      "indexes": [],
+      "collation": {},
+      "sharding": {
+        "unique": true,
+        "collation": "null"
+      },
+      "GUID": "40322eea-dbd8-4b85-834b-503ca184f51b",
+      "code": "zonas_cobertura.schema",
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "id": "https://bienestar-en-casa.local/schemas/zonas_cobertura.schema.json",
+      "bucketId": "13649b95-edf2-454b-9ebb-772a36fcca6b",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      }
+    }
+  ],
+  "buckets": [
+    {
+      "name": "direcciones.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "ef1c08bb-9000-4a3d-bead-71287f161ecc"
+      ],
+      "backgroundColor": {
+        "r": 129,
+        "g": 212,
+        "b": 250,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "24765b63-69ba-41a5-bf92-ec6c635c6461",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "horarios_disponibilidad.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "5ee931f9-21a0-443f-8d92-cd8cf6b969cd"
+      ],
+      "backgroundColor": {
+        "r": 165,
+        "g": 214,
+        "b": 167,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "50e6fd42-d8ef-4b9d-87dd-8bab0408bf3f",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "periodos_no_disponibilidad.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "760fcff5-5c0a-43aa-8dec-23e790720363"
+      ],
+      "backgroundColor": {
+        "r": 239,
+        "g": 154,
+        "b": 154,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "445f6aa6-fd43-4dc7-9a35-14ae8bf12bbb",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "recuperacion_contrasena.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "6216225e-8426-48da-abdb-dd57d975b7ad"
+      ],
+      "backgroundColor": {
+        "r": 255,
+        "g": 183,
+        "b": 77,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "27f2c19a-fdb2-4f88-bf22-3ec61ab580d6",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "servicios.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "88807cda-7184-44a3-9e49-f829962a8bee"
+      ],
+      "backgroundColor": {
+        "r": 255,
+        "g": 238,
+        "b": 88,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "3e978350-144b-4325-872b-976d91489f86",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "solicitudes.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "066d6e04-cfed-4ea6-ae1c-803120b2bd96"
+      ],
+      "backgroundColor": {
+        "r": 206,
+        "g": 147,
+        "b": 216,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "96d65277-1194-4f58-812e-33ff9e0f7e15",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "usuarios.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b"
+      ],
+      "backgroundColor": {
+        "r": 189,
+        "g": 189,
+        "b": 189,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "b8eef5b3-7fd5-4ce7-9710-459f26e87b9f",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    },
+    {
+      "name": "zonas_cobertura.schema",
+      "type": "bucket",
+      "collectionIds": [
+        "40322eea-dbd8-4b85-834b-503ca184f51b"
+      ],
+      "backgroundColor": {
+        "r": 33,
+        "g": 150,
+        "b": 243,
+        "a": 1
+      },
+      "show": true,
+      "isActivated": true,
+      "GUID": "13649b95-edf2-454b-9ebb-772a36fcca6b",
+      "hackoladeMeta": {
+        "validationErrors": {
+          "name": true
+        }
+      }
+    }
+  ],
+  "views": [],
+  "relationships": [
+    {
+      "name": "",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+          "80873717-36de-4f6d-b247-9df39d27595a"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "f5b75ff8-6145-4433-b4da-70ec0445504e",
+      "hackoladeMeta": {
+        "namingConvention": ""
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+      "hackoladeStyles": {
+        "GUID": "705d2f99-6a41-4776-8f50-ecee1d6178a2",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4205.30303030303,
+            "y": 1244
+          },
+          {
+            "x": 4205.30303030303,
+            "y": 1329.6363636363649
+          },
+          {
+            "x": 4254.984848484849,
+            "y": 1329.6363636363649
+          },
+          {
+            "x": 4254.984848484849,
+            "y": 1415.27272727273
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship1",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "40322eea-dbd8-4b85-834b-503ca184f51b",
+          "90af4029-95c4-4859-86e0-45f23f63eb9b"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "317312ac-9bf7-404e-abae-15eca35c5578",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "40322eea-dbd8-4b85-834b-503ca184f51b",
+      "hackoladeStyles": {
+        "GUID": "bae7bb67-1392-4f7d-804b-95677a01c9ea",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4251.787878787879,
+            "y": 1830.1818181818253
+          },
+          {
+            "x": 4251.787878787879,
+            "y": 1757.7272727272775
+          },
+          {
+            "x": 4254.984848484849,
+            "y": 1757.7272727272775
+          },
+          {
+            "x": 4254.984848484849,
+            "y": 1685.27272727273
+          }
+        ],
+        "sides": [
+          "top",
+          "bottom"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "88807cda-7184-44a3-9e49-f829962a8bee",
+          "31858067-4047-4d1a-a46f-d1d9285b64d0"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "abf9a58f-005e-4b14-a718-520a3dded7c8",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "88807cda-7184-44a3-9e49-f829962a8bee",
+      "hackoladeStyles": {
+        "GUID": "754e441a-d28b-4c20-9867-ebb3a4b16f94",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4568.606060606053,
+            "y": 1896.4242424242457
+          },
+          {
+            "x": 4492.04545454545,
+            "y": 1896.4242424242457
+          },
+          {
+            "x": 4492.04545454545,
+            "y": 1640.27272727273
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1640.27272727273
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship2",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "5ee931f9-21a0-443f-8d92-cd8cf6b969cd",
+          "ed23780d-3d2a-495d-a793-eeabcf7ec335"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "9611f71e-b794-43b4-a787-1a2ae1236c6b",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "5ee931f9-21a0-443f-8d92-cd8cf6b969cd",
+      "hackoladeStyles": {
+        "GUID": "9d97410f-651c-48a7-9059-592b90b55fea",
+        "autoPositioning": false,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4972.030303030299,
+            "y": 1145.0303030303062
+          },
+          {
+            "x": 4899.757575757574,
+            "y": 1145.0303030303062
+          },
+          {
+            "x": 4899.757575757574,
+            "y": 1453.8441558441586
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1453.8441558441586
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship3",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "760fcff5-5c0a-43aa-8dec-23e790720363",
+          "87425bd5-0dad-4022-ad4a-2b48ba00988a"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "9b4d172b-cf77-4768-82b5-f3315dad8c6e",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "760fcff5-5c0a-43aa-8dec-23e790720363",
+      "hackoladeStyles": {
+        "GUID": "d1b0927c-349f-4d0c-ace3-793770a47e9b",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4979.333333333318,
+            "y": 1384.3333333333355
+          },
+          {
+            "x": 4697.409090909083,
+            "y": 1384.3333333333355
+          },
+          {
+            "x": 4697.409090909083,
+            "y": 1550.27272727273
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1550.27272727273
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship4",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "6216225e-8426-48da-abdb-dd57d975b7ad",
+          "bdf8ffbc-3d3c-44ee-9e81-77ff6c63cde6"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "91959576-0786-432c-8d12-4467758ad6b7",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "6216225e-8426-48da-abdb-dd57d975b7ad",
+      "hackoladeStyles": {
+        "GUID": "644a1890-9658-42b2-bb53-6d2a6b75d52a",
+        "autoPositioning": false,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4993.030303030305,
+            "y": 1632.8787878787937
+          },
+          {
+            "x": 4616.257575757577,
+            "y": 1632.8787878787937
+          },
+          {
+            "x": 4616.257575757577,
+            "y": 1595.27272727273
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1595.27272727273
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship5",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+          "710cb8b2-512b-40e9-8cf1-e6629d0d8e5d"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "8785bff4-6470-4f04-8de5-0403e680017b",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+      "hackoladeStyles": {
+        "GUID": "14e64136-cf3e-44ab-aaa0-052880df985c",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4516.909090909086,
+            "y": 1167.0909090909156
+          },
+          {
+            "x": 4466.196969696968,
+            "y": 1167.0909090909156
+          },
+          {
+            "x": 4466.196969696968,
+            "y": 1505.27272727273
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1505.27272727273
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship6",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+          "62d0d7fe-aa9b-4b11-a340-20071e0dd859"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+          "ac5e56c8-7037-46a5-a670-3bb5fcf1449c"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "202b7f06-7221-4696-8b91-909297bed910",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+      "childCollection": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+      "hackoladeStyles": {
+        "GUID": "937aa52a-d7bd-4ce8-9b9c-0c6a2a2ebdde",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4516.909090909086,
+            "y": 1053.0909090909156
+          },
+          {
+            "x": 4466.196969696968,
+            "y": 1053.0909090909156
+          },
+          {
+            "x": 4466.196969696968,
+            "y": 1460.27272727273
+          },
+          {
+            "x": 4415.484848484849,
+            "y": 1460.27272727273
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship7",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "88807cda-7184-44a3-9e49-f829962a8bee",
+          "4d0ab7c8-9c20-4be0-a503-03357ddd809d"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+          "7f8b5ad8-485c-4891-b3b7-8198ecb17c73"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "c299ddbe-0561-4b5f-9329-aedc5623cb9f",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "88807cda-7184-44a3-9e49-f829962a8bee",
+      "childCollection": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+      "hackoladeStyles": {
+        "GUID": "d657204e-0426-415d-b838-ad56611c1d45",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4670.409090909086,
+            "y": 1281.0909090909156
+          },
+          {
+            "x": 4670.409090909086,
+            "y": 1489.7575757575805
+          },
+          {
+            "x": 4698.606060606053,
+            "y": 1489.7575757575805
+          },
+          {
+            "x": 4698.606060606053,
+            "y": 1698.4242424242457
+          }
+        ],
+        "sides": [
+          "bottom",
+          "top"
+        ]
+      }
+    },
+    {
+      "name": "New Relationship8",
+      "relationshipType": "Foreign Key",
+      "parentField": [
+        [
+          "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+          "f107f94e-f03b-4cac-9eb0-81fd8baa80e0"
+        ]
+      ],
+      "parentCardinality": "1",
+      "childField": [
+        [
+          "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+          "7060582c-4ade-4ece-9e70-f22e91c1b3df"
+        ]
+      ],
+      "isActivated": true,
+      "childCardinality": "0..n",
+      "GUID": "c11c35c1-c33b-4b04-a24c-38302df3fdae",
+      "hackoladeMeta": {
+        "validationErrors": {}
+      },
+      "parentCollection": "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+      "childCollection": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+      "hackoladeStyles": {
+        "GUID": "48b8a3d2-73cf-4b0a-b36b-b29db99edd14",
+        "autoPositioning": true,
+        "type": "Orthogonal",
+        "thickness": 2,
+        "color": "#79c4ff",
+        "dataType": "",
+        "shape": [
+          {
+            "x": 4516.909090909086,
+            "y": 1024.5909090909156
+          },
+          {
+            "x": 4416.606060606058,
+            "y": 1024.5909090909156
+          },
+          {
+            "x": 4416.606060606058,
+            "y": 1154
+          },
+          {
+            "x": 4316.30303030303,
+            "y": 1154
+          }
+        ],
+        "sides": [
+          "left",
+          "right"
+        ]
+      }
+    }
+  ],
+  "users": [],
+  "diagramViews": [],
+  "idToNameHashTable": {
+    "24765b63-69ba-41a5-bf92-ec6c635c6461": "direcciones.schema",
+    "f107f94e-f03b-4cac-9eb0-81fd8baa80e0": "id",
+    "80873717-36de-4f6d-b247-9df39d27595a": "cliente_id",
+    "026ce125-9b0b-4497-aa1b-42ca985e22c8": "ciudad",
+    "4fe93edf-8b62-43d6-831f-e7c0fffea0e4": "barrio",
+    "ad288f7c-8ba6-4cbc-8bf8-8ab1b7e885c2": "calle",
+    "a5fa38c1-be6f-429a-8ca0-cfc738e017b7": "numero",
+    "dc49877b-1f06-4065-b51d-c86943f72377": "referencia",
+    "3f6a1efb-42ec-42b4-96e1-5b8f4f8858eb": "es_principal",
+    "ef1c08bb-9000-4a3d-bead-71287f161ecc": "direcciones",
+    "50e6fd42-d8ef-4b9d-87dd-8bab0408bf3f": "horarios_disponibilidad.schema",
+    "1fb91faf-c956-4b75-a4a0-039c78f82ee5": "id",
+    "ed23780d-3d2a-495d-a793-eeabcf7ec335": "proveedor_id",
+    "cfac7744-0566-4b73-bfda-d7186221e96c": "dia_semana",
+    "2c290a8c-a9c4-4b41-94da-c07555f47e8b": "hora_inicio",
+    "9a7fdcd4-b792-4b36-a0f5-f3a54f78be1d": "hora_fin",
+    "5ee931f9-21a0-443f-8d92-cd8cf6b969cd": "horarios_disponibilidad",
+    "445f6aa6-fd43-4dc7-9a35-14ae8bf12bbb": "periodos_no_disponibilidad.schema",
+    "7bc223b9-193a-4d0c-a7ad-9e16f5b5e351": "id",
+    "87425bd5-0dad-4022-ad4a-2b48ba00988a": "proveedor_id",
+    "20fb7b3c-f370-47b8-a5c6-19ac0e6bb51b": "fecha_inicio",
+    "c92e4a0d-7fe5-4dba-a443-b5e27cc6de73": "fecha_fin",
+    "dff27b77-ae2f-479f-8178-63db47206a5a": "motivo",
+    "760fcff5-5c0a-43aa-8dec-23e790720363": "periodos_no_disponibilidad",
+    "27f2c19a-fdb2-4f88-bf22-3ec61ab580d6": "recuperacion_contrasena.schema",
+    "b2e29c71-7c28-4564-919e-d94a47d38e13": "id",
+    "bdf8ffbc-3d3c-44ee-9e81-77ff6c63cde6": "usuario_id",
+    "7540e6f5-12b0-4eda-8811-ec6081d811a3": "codigo",
+    "c6f4ba7f-6734-4614-9c82-3be574c1c7b6": "fecha_expiracion",
+    "87d86f97-29c9-4306-a39e-8f7133d39578": "fecha_uso",
+    "7991b8d9-d43a-4c6c-b5c8-53e6d84f40d0": "fecha_creacion",
+    "1e160b41-ae3b-4c80-beb1-1d712363ffdf": "invalidado",
+    "6216225e-8426-48da-abdb-dd57d975b7ad": "recuperacion_contrasena",
+    "3e978350-144b-4325-872b-976d91489f86": "servicios.schema",
+    "4d0ab7c8-9c20-4be0-a503-03357ddd809d": "id",
+    "31858067-4047-4d1a-a46f-d1d9285b64d0": "proveedor_id",
+    "6696eb11-5087-455e-be2d-263640428770": "nombre",
+    "6c0c9d37-af7c-47a5-be30-41e276c7a6d1": "categoria",
+    "00915e0f-94c0-4b70-95ab-e5fcbc3bbb32": "descripcion",
+    "8759ddbe-fcb1-450f-b032-07c7e434b4d0": "duracion_minutos",
+    "49ca4de8-c14c-403c-a0ef-efb45520bda9": "precio",
+    "fa625187-4b02-4f59-9762-1996636c64a3": "estado",
+    "d7403015-3030-4837-9429-55904ee469e5": "multimedia",
+    "1b461e20-9f46-481d-8102-944787bb47a4": "id",
+    "96316b14-5070-4d92-aff3-498f92392394": "tipo",
+    "9d35d383-1608-4431-81a3-dc68c9d1159a": "url",
+    "e4b3778a-ef37-4a91-8f86-199096287487": "orden",
+    "3fbdae1d-0b6b-4cb1-97c9-56011a5efa0f": "insumos",
+    "cd3d8af0-8add-420c-8e80-9964fc310ade": "id",
+    "9fc3a8e7-fc32-458f-aab2-4df42bcc4ece": "tipo",
+    "3fee8233-d43e-4588-91d5-0feaa4742b92": "nombre",
+    "e4f703fa-4597-4b7c-9755-f38cc0d11030": "descripcion",
+    "88807cda-7184-44a3-9e49-f829962a8bee": "servicios",
+    "96d65277-1194-4f58-812e-33ff9e0f7e15": "solicitudes.schema",
+    "dbb32b39-3992-487c-8e8d-521b6d96f8e2": "id",
+    "710cb8b2-512b-40e9-8cf1-e6629d0d8e5d": "cliente_id",
+    "ac5e56c8-7037-46a5-a670-3bb5fcf1449c": "proveedor_id",
+    "7f8b5ad8-485c-4891-b3b7-8198ecb17c73": "servicio_id",
+    "ed2a8e1d-26e5-43e3-81c1-13c97563966d": "servicio_nombre",
+    "f3b8afec-8bde-4bcb-9881-f90697ade181": "servicio_precio",
+    "e4f11f53-cdc5-4c5d-8dfc-f0cee508ad43": "servicio_duracion",
+    "7060582c-4ade-4ece-9e70-f22e91c1b3df": "direccion_id",
+    "a1b07c3d-4a09-458f-bf45-a457f86fdfd6": "barrio_sector",
+    "0ec51770-1619-4731-a9bd-b4f18b4e2578": "info_localizacion",
+    "eeb72d03-a1b3-4a3d-94f8-afbcbf10bc84": "observaciones",
+    "40b8855a-83e6-4687-aa04-9a5728fd9d23": "fecha_hora_inicio",
+    "c0a64482-372b-4cd6-a6e1-6014c24526f4": "fecha_hora_propuesta",
+    "cd2246f2-ab02-4700-9e3c-3baad1305cd7": "estado",
+    "b0f42a45-fdf0-4737-9350-e684ae320a85": "motivo",
+    "f8217bf3-24db-4d9b-b7ba-34a8bc20f67e": "fecha_creacion",
+    "560aedac-3496-43b9-b06b-4726005d5f20": "fecha_actualizacion",
+    "066d6e04-cfed-4ea6-ae1c-803120b2bd96": "solicitudes",
+    "b8eef5b3-7fd5-4ce7-9710-459f26e87b9f": "usuarios.schema",
+    "62d0d7fe-aa9b-4b11-a340-20071e0dd859": "id",
+    "4903d8f2-85e9-487c-a7a4-3bb65ab6b33d": "email",
+    "2d564231-d19d-44d0-8350-ee4459ed5794": "password_hash",
+    "cc74f0a8-3284-4835-9be1-d82935b345a9": "tipo",
+    "bb4c2c70-08a2-4210-8efa-41eead57221e": "nombre",
+    "4b17d7dd-da63-4b94-9a1a-44c2febfcc33": "telefono",
+    "61a72b6a-5bf0-41df-9276-4abde64dd13b": "fecha_registro",
+    "09cbf574-2d92-424e-8043-498f7b9adab2": "cliente",
+    "bf1e0992-cd4e-4964-90e9-5228a4ecabdc": "properties",
+    "f1e9ae14-f68d-4e35-9191-181a470c5752": "proveedor",
+    "0895f9aa-aa68-4212-9f07-e5dd166fae25": "properties",
+    "1bda4273-8375-494d-8d34-d4e081a072ef": "biografia",
+    "4b02da77-1de9-4dfb-9055-936210b9298f": "anios_experiencia",
+    "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b": "usuarios",
+    "13649b95-edf2-454b-9ebb-772a36fcca6b": "zonas_cobertura.schema",
+    "c55241e7-c271-4a26-a1b9-32c19ba85b7e": "id",
+    "90af4029-95c4-4859-86e0-45f23f63eb9b": "proveedor_id",
+    "2d8e1567-5fb6-4f3b-8137-398cd4742024": "ciudad",
+    "9d8d6200-5476-41d9-a0f9-1f324b53d6bd": "barrio_sector",
+    "40322eea-dbd8-4b85-834b-503ca184f51b": "zonas_cobertura",
+    "f5b75ff8-6145-4433-b4da-70ec0445504e": "",
+    "317312ac-9bf7-404e-abae-15eca35c5578": "New Relationship1",
+    "abf9a58f-005e-4b14-a718-520a3dded7c8": "New Relationship",
+    "9611f71e-b794-43b4-a787-1a2ae1236c6b": "New Relationship2",
+    "9b4d172b-cf77-4768-82b5-f3315dad8c6e": "New Relationship3",
+    "91959576-0786-432c-8d12-4467758ad6b7": "New Relationship4",
+    "8785bff4-6470-4f04-8de5-0403e680017b": "New Relationship5",
+    "202b7f06-7221-4696-8b91-909297bed910": "New Relationship6",
+    "c299ddbe-0561-4b5f-9329-aedc5623cb9f": "New Relationship7",
+    "c11c35c1-c33b-4b04-a24c-38302df3fdae": "New Relationship8"
+  },
+  "definitions": {
+    "type": "definitions",
+    "properties": [],
+    "GUID": "33181905-6d64-4c1e-b16a-3bdea3c12de1"
+  },
+  "polyglotDefinitions": {
+    "type": "polyglotDefinitions",
+    "properties": [],
+    "GUID": "81e856bb-49d5-4c24-82b1-35b003f569da"
+  },
+  "externalDefinitions": {
+    "type": "externalDefinitions",
+    "properties": [],
+    "GUID": "c3bd9a6c-b208-4e0d-b65e-ce516a0634fb"
+  },
+  "sources": [],
+  "decorativeSymbols": [],
+  "businessGlossaries": [],
+  "businessGlossaryTerms": [],
+  "dbVersion": "v8.x",
+  "dbVendor": "MongoDB",
+  "appTarget": "MONGODB",
+  "creationTS": "2026-11-23T19:44:02.538Z",
+  "GUID": "ba8ddb23-dd94-47cb-9c68-250b9550add6",
+  "isLineageEnabled": false,
+  "lastModifTS": "2026-11-23T20:07:20.562Z",
+  "persistenceSchemaVersion": "9",
+  "isCreatedByPlugin": true,
+  "pluginInformation": {
+    "pluginEngineVersion": "1.0.0"
+  },
+  "applicationInformation": {
+    "version": "9.0.1"
+  },
+  "settings": {
+    "centralPane": {
+      "dbLevel": {
+        "erd": [
+          {
+            "GUID": "ef1c08bb-9000-4a3d-bead-71287f161ecc",
+            "x": 4094.30303030303,
+            "y": 1064,
+            "width": 222,
+            "height": 180,
+            "color": {}
+          },
+          {
+            "GUID": "5ee931f9-21a0-443f-8d92-cd8cf6b969cd",
+            "x": 4972.030303030299,
+            "y": 1082.0303030303062,
+            "width": 272,
+            "height": 126,
+            "color": {}
+          },
+          {
+            "GUID": "760fcff5-5c0a-43aa-8dec-23e790720363",
+            "x": 4979.333333333318,
+            "y": 1321.3333333333355,
+            "width": 294,
+            "height": 126,
+            "color": {}
+          },
+          {
+            "GUID": "6216225e-8426-48da-abdb-dd57d975b7ad",
+            "x": 4993.030303030305,
+            "y": 1551.8787878787937,
+            "width": 282,
+            "height": 162,
+            "color": {}
+          },
+          {
+            "GUID": "88807cda-7184-44a3-9e49-f829962a8bee",
+            "x": 4568.606060606053,
+            "y": 1698.4242424242457,
+            "width": 260,
+            "height": 396,
+            "color": {}
+          },
+          {
+            "GUID": "066d6e04-cfed-4ea6-ae1c-803120b2bd96",
+            "x": 4516.909090909086,
+            "y": 939.0909090909156,
+            "width": 307,
+            "height": 342,
+            "color": {}
+          },
+          {
+            "GUID": "b430eb71-8fc8-45a4-8a8f-1bed1f912a6b",
+            "x": 4094.484848484849,
+            "y": 1415.27272727273,
+            "width": 321,
+            "height": 270,
+            "color": {}
+          },
+          {
+            "GUID": "40322eea-dbd8-4b85-834b-503ca184f51b",
+            "x": 4122.787878787879,
+            "y": 1830.1818181818253,
+            "width": 258,
+            "height": 108,
+            "color": {}
+          }
+        ],
+        "erdDefinitions": {
+          "erd": [],
+          "rootPath": [],
+          "entities": [],
+          "decorativeSymbols": []
+        },
+        "buckets": [
+          {
+            "x": 4030.30303030303,
+            "y": 1000,
+            "GUID": "24765b63-69ba-41a5-bf92-ec6c635c6461"
+          },
+          {
+            "x": 4908.030303030299,
+            "y": 1018.0303030303062,
+            "GUID": "50e6fd42-d8ef-4b9d-87dd-8bab0408bf3f"
+          },
+          {
+            "x": 4915.333333333318,
+            "y": 1257.3333333333355,
+            "GUID": "445f6aa6-fd43-4dc7-9a35-14ae8bf12bbb"
+          },
+          {
+            "x": 4929.030303030305,
+            "y": 1487.8787878787937,
+            "GUID": "27f2c19a-fdb2-4f88-bf22-3ec61ab580d6"
+          },
+          {
+            "x": 4504.606060606053,
+            "y": 1634.4242424242457,
+            "GUID": "3e978350-144b-4325-872b-976d91489f86"
+          },
+          {
+            "x": 4452.909090909086,
+            "y": 875.0909090909156,
+            "GUID": "96d65277-1194-4f58-812e-33ff9e0f7e15"
+          },
+          {
+            "x": 4030.484848484849,
+            "y": 1351.27272727273,
+            "GUID": "b8eef5b3-7fd5-4ce7-9710-459f26e87b9f"
+          },
+          {
+            "x": 4058.787878787879,
+            "y": 1766.1818181818253,
+            "GUID": "13649b95-edf2-454b-9ebb-772a36fcca6b"
+          }
+        ],
+        "collapsedNodes": [],
+        "activeRelationship": "",
+        "activeRelationshipFields": {
+          "childField": [],
+          "parentField": []
+        },
+        "selectedCollections": [],
+        "displayColorPicker": false,
+        "graphView": {
+          "erd": [],
+          "buckets": [],
+          "decorativeSymbols": [],
+          "forceLayout": true,
+          "defaultLinkLength": 300,
+          "options": []
+        },
+        "diagramViews": [],
+        "decorativeSymbols": [],
+        "nestedCollectionsLayout": "horizontal",
+        "options": [],
+        "relationshipUpdateDisabled": false
+      },
+      "collectionLevel": {},
+      "changed": false
+    },
+    "dtDiagram": {
+      "collapsedNodes": [],
+      "shouldDistributeCollections": false
+    }
+  }
+}
